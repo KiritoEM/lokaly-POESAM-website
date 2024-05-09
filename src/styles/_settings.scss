@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+//importation des fonts
 @layer base {
     //importation des fonts
     $font-path: './../assets/fonts/';
@@ -36,6 +37,26 @@
         url('#{$font-path}CalSans-SemiBold.ttf') format('truetype');
         font-display: swap;
         font-style: italic;
+    }
+
+    body {
+        font-family: 'GeneralSans-Regular', sans-serif;
+    }
+
+    .general-sans-regular {
+        font-family: 'GeneralSans-Regular', sans-serif;
+    }
+
+    .general-sans-medium {
+        font-family: 'GeneralSans-Medium', sans-serif;
+    }
+
+    .general-sans-semibold {
+        font-family: 'GeneralSans-Semibold', sans-serif;
+    }
+
+    .general-sans-bold {
+        font-family: 'GeneralSans-Bold', sans-serif;
     }
 
 }
