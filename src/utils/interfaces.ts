@@ -4,4 +4,9 @@ interface Ichildren {
   children: ReactNode;
 }
 
-export type { Ichildren };
+interface InavList {
+  label: string;
+  scrollSection?: () => void;
+}
+
+export type { Ichildren, InavList };
