@@ -1,10 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 //importation des fonts
 @layer base {
-    //importation des fonts
     $font-path: './../assets/fonts/';
 
     $font-weights: ('Extralight': 200,
@@ -39,10 +34,6 @@
         font-style: italic;
     }
 
-    body {
-        font-family: 'GeneralSans-Regular', sans-serif;
-    }
-
     .general-sans-regular {
         font-family: 'GeneralSans-Regular', sans-serif;
     }
@@ -59,4 +50,16 @@
         font-family: 'GeneralSans-Bold', sans-serif;
     }
 
+    .calSans {
+        font-family: 'CalSans-SemiBold', sans-serif;
+    }
+
+}
+
+//Styles globales
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'GeneralSans-Medium', sans-serif;
 }

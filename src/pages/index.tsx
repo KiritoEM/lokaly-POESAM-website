@@ -1,10 +1,11 @@
+import LandingHero from "@/components/sections/landing/LandingHero";
 import LandingLayout from "@/layout/LandingLayout";
 
 const Landing = (): JSX.Element => {
   return (
     <section className="landing">
       <LandingLayout>
-        <h1></h1>
+        <LandingHero />
       </LandingLayout>
     </section>
   );
