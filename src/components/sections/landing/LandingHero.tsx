@@ -1,6 +1,6 @@
 const LandingHero = (): JSX.Element => {
   return (
-    <section className="landing__hero px-36">
+    <section className="landing__hero px-36 mt-16">
       <div className="hero-header w-96 flex flex-col gap-3">
         <h2 className="hero-title calSans text-green02 leading-tight">
           Pour une consommation{" "}
