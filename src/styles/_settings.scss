@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    //importation des fonts
+    $font-path: './../assets/fonts/';
+
+    $font-weights: ('Extralight': 200,
+            'Light': 300,
+            'Regular': 400,
+            'Medium': 500,
+            'Semibold': 600,
+            'Bold': 700,
+        );
+
+    $default-font-weight: 400;
+
+    @each $variant,
+    $weight in $font-weights {
+        @font-face {
+            font-family: 'GeneralSans-#{$variant}';
+            src: url('#{$font-path}GeneralSans-#{$variant}.woff2') format('woff2'),
+            url('#{$font-path}GeneralSans-#{$variant}.woff') format('woff'),
+            url('#{$font-path}GeneralSans-#{$variant}.ttf') format('truetype');
+            font-weight: if($weight, $weight, $default-font-weight);
+            font-display: swap;
+            font-style: normal;
+        }
+    }
+
+    @font-face {
+        font-family: 'CalSans-SemiBold';
+        src: url('#{$font-path}CalSans-SemiBold.woff2') format('woff2'),
+        url('#{$font-path}CalSans-SemiBold.woff') format('woff'),
+        url('#{$font-path}CalSans-SemiBold.ttf') format('truetype');
+        font-display: swap;
+        font-style: italic;
+    }
+
+}

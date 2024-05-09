@@ -19,6 +19,7 @@ const config: Config = {
         gray01: "#B3B3B3",
         gray02: "#2E3230",
       },
+      fontFamily: {},
     },
   },
   plugins: [],
