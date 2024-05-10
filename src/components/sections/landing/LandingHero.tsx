@@ -9,7 +9,7 @@ const LandingHero = (): JSX.Element => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setImgPositionClass("ml-0 w-screen h-screen ml-28");
+      setImgPositionClass("absolute ml-36 w-screen");
       transition = {
         duration: 2,
       };
@@ -65,7 +65,9 @@ const LandingHero = (): JSX.Element => {
           </motion.button>
         </div>
       </div>
-      <AnimatePresence>
+      <div
+        className={`hero-video w-full overflow-hidden  z-20 ${imgPositionClass} transition-ml justify-center`}
+      >
         <motion.video
           src="/hero-scene.mp4"
           initial={{ opacity: 0 }}
@@ -73,11 +75,11 @@ const LandingHero = (): JSX.Element => {
           autoPlay
           muted
           transition={transition}
-          className={`hero-img  z-20 absolute ${imgPositionClass} transition-ml justify-center`}
+          className={`hero-img `}
         ></motion.video>
-      </AnimatePresence>
+      </div>
     </section>
   );
-};
+}; /*  */
 
 export default LandingHero;
