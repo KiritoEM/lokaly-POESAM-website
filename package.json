@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^11.1.9",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.77.0"
+    "sass": "^1.77.0",
+    "split-text": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
