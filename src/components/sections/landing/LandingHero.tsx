@@ -2,18 +2,29 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const LandingHero = (): JSX.Element => {
-  const [imgPositionClass, setImgPositionClass] = useState("left-0 top-0");
+  const [imgPositionClass, setImgPositionClass] = useState(
+    "absolute left-0 top-0"
+  );
+  let transition = {};
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setImgPositionClass("op-36 w-screen h-screen ml-28");
+      setImgPositionClass("ml-0 w-screen h-screen ml-28");
+      transition = {
+        duration: 2,
+      };
     }, 5000);
 
     return () => clearTimeout(timer);
-  }, []); // Le tab
+  }, []);
+
+  transition = {
+    duration: 2,
+  };
+
   let title = "Pour une consommation";
   return (
-    <section className="landing__hero px-44 mt-28 items-start flex 	w-screen overflow-hidden">
+    <section className="landing__hero px-44 mt-28 items-start flex w-screen overflow-hidden">
       <div className="hero-header flex justify-center relative z-30">
         <div className="hero-header__container w-96 flex flex-col gap-3 mt-32 ">
           <div className="title">
@@ -54,12 +65,17 @@ const LandingHero = (): JSX.Element => {
           </motion.button>
         </div>
       </div>
-      <video
-        src="/hero-scene.mp4"
-        autoPlay
-        muted
-        className={`hero-img absolute z-20 ${imgPositionClass}`}
-      ></video>
+      <AnimatePresence>
+        <motion.video
+          src="/hero-scene.mp4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          autoPlay
+          muted
+          transition={transition}
+          className={`hero-img  z-20 absolute ${imgPositionClass} transition-ml justify-center`}
+        ></motion.video>
+      </AnimatePresence>
     </section>
   );
 };
