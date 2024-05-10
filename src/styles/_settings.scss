@@ -67,3 +67,10 @@
 body {
     background-color: #F9FCF9;
 }
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+}
