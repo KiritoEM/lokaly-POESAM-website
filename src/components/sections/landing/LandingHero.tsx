@@ -10,7 +10,7 @@ const LandingHero = (): JSX.Element => {
             <motion.h2
               initial={{ opacity: 0, y: 17, x: 30, scale: 0 }}
               animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-              transition={{ delay: 0.45 }}
+              transition={{ delay: 3.2 }}
               className="hero-title calSans text-green02 leading-tight flex flex-col w-full"
             >
               {title}
@@ -18,7 +18,7 @@ const LandingHero = (): JSX.Element => {
             <motion.span
               initial={{ opacity: 0, y: 20, x: 35, scale: 0 }}
               animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 3.4 }}
               className="hero-title calSans text-green01 leading-tight flex flex-row"
             >
               reponsable
@@ -27,7 +27,7 @@ const LandingHero = (): JSX.Element => {
           <motion.p
             initial={{ opacity: 0, y: -55, x: -30 }}
             animate={{ opacity: 1, y: 0, x: 0 }}
-            transition={{ delay: 0.7 }}
+            transition={{ delay: 4 }}
             className="text-gray01 text-lg"
           >
             Valorisez les produits locaux et contribuez à un mode de vie plus
@@ -36,7 +36,7 @@ const LandingHero = (): JSX.Element => {
           <motion.button
             initial={{ opacity: 0, y: -45, x: -25, scale: 0 }}
             animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-            transition={{ delay: 0.7 }}
+            transition={{ delay: 4.3 }}
             className="text-white bg-green01 rounded-3xl px-6 py-3 flex items-center gap-2 w-max mt-8"
           >
             Télécharger l' app{" "}
