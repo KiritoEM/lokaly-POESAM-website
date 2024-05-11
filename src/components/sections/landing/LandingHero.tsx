@@ -118,7 +118,9 @@ const LandingHero = (): JSX.Element => {
       ></motion.video>
 
       {/* image pour le responsive */}
-      <img src="/home-img.png" alt="" />
+      <div className="hero-im flex justify-center w-full">
+        <img src="/home-img.png" />
+      </div>
     </section>
   );
 };

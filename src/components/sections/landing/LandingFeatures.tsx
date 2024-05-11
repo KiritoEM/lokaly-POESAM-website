@@ -35,7 +35,7 @@ const LandingFeatures = (): JSX.Element => {
 
   return (
     <section
-      className="landing__features pt-36 px-32 bg-white"
+      className="landing__features pt-36 px-32 bg-white hidden"
       ref={ref}
       id="features"
     >
