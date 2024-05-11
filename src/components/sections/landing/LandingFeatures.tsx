@@ -1,16 +1,54 @@
+import { useEffect } from "react";
+import { delay, motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 const LandingFeatures = (): JSX.Element => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const variants = {
+    variant1: {
+      hidden: { opacity: 0, y: -55 },
+      visible: { opacity: 1, y: 0, transition: { delay: 0.7 } },
+    },
+    variant2: {
+      hidden: { opacity: 0, y: -65 },
+      visible: { opacity: 1, y: 0, transition: { delay: 1.2 } },
+    },
+    variant3: {
+      hidden: { opacity: 0, y: -75 },
+      visible: { opacity: 1, y: 0, transition: { delay: 1.4 } },
+    },
+  };
+
   return (
-    <section className="landing__features py-24 px-32 bg-white">
-      <div className="features-header flex flex-col items-center gap-3">
+    <section className="landing__features py-24 px-32 bg-white" ref={ref}>
+      <motion.div
+        variants={variants.variant1}
+        initial="hidden"
+        animate={controls}
+        className="features-header flex flex-col items-center gap-2"
+      >
         <h4 className="text-5xl text-green01 calSans">
           Connecter, Promouvoir, Agir
         </h4>
-        <p className="text-white01 w-72 text-center  text-lg">
+        <p className="text-white01 w-96 text-center  text-lg">
           pour une Alimentation Locale et Durable à Madagascar
         </p>
-      </div>
-      <div className="features-content flex gap-16 mt-16">
-        <div className="header w-1/3 flex flex-col gap-11">
+      </motion.div>
+      <div className="features-content flex gap-20 mt-16">
+        <motion.div
+          variants={variants.variant2}
+          initial="hidden"
+          animate={controls}
+          className="header w-1/3 flex flex-col gap-12"
+        >
           <div className="text-container flex flex-col gap-5">
             <h3 className="text-3xl calSans text-gray02">
               Moins de gaspillage, Plus de soutien aux producteurs, <br /> Une
@@ -46,9 +84,14 @@ const LandingFeatures = (): JSX.Element => {
               <img src="/icons/send-icon.png" className="w-20" />
             </span>
           </div>
-        </div>
-        <div className="features flex gap-7 w-2/3 overflow-hidden">
-          <div className="features-card w-2/4 bg-green03 rounded-lg  flex flex-col items-center p-9 gap-10">
+        </motion.div>
+        <motion.div
+          variants={variants.variant3}
+          initial="hidden"
+          animate={controls}
+          className="features flex gap-7 w-2/3 overflow-hidden"
+        >
+          <div className="features-card w-2/4 bg-green03 rounded-lg  flex flex-col items-center p-8 gap-10">
             <div className="header flex flex-col items-center gap-2">
               <h3 className="calSans text-gray02 text-3xl">
                 Facile à installer
@@ -59,7 +102,12 @@ const LandingFeatures = (): JSX.Element => {
             </div>
             <img src="/home-img.png" alt="" />
           </div>
-          <div className="features-card w-2/4 bg-green04 rounded-lg flex flex-col items-center p-9 gap-10">
+          <motion.div
+            variants={variants.variant1}
+            initial="hidden"
+            animate={controls}
+            className="features-card w-2/4 bg-green04 rounded-lg flex flex-col items-center p-8 gap-10"
+          >
             <div className="header flex flex-col items-center gap-2">
               <h3 className="calSans text-gray02 text-3xl opacity-40	">
                 Acces direct
@@ -69,8 +117,8 @@ const LandingFeatures = (): JSX.Element => {
               </p>
             </div>
             <img src="/home-img.png" className="opacity-40	" />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
