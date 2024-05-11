@@ -1,9 +1,48 @@
 import { partnerList } from "@/helpers/constants";
+import { useEffect } from "react";
+import { delay, motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const LandingPatenary = (): JSX.Element => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({ threshold: 0.6 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const variants = {
+    varient1: {
+      hidden: { opacity: 0, y: -55 },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: { delay: 0.4, duration: 0.4, type: "spring" },
+        stiffness: 100,
+      },
+    },
+    varient2: {
+      hidden: { opacity: 0, y: -75, scale: 0 },
+      visible: {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        transition: { delay: 0.6, duration: 0.5, type: "spring" },
+        stiffness: 100,
+      },
+    },
+  };
+
   return (
-    <section className="landing__partners pt-36 px-40 bg-white">
-      <div className="partners-header flex flex-col items-center gap-2">
+    <section className="landing__partners pt-36 px-40 bg-white" ref={ref}>
+      <motion.div
+        variants={variants.varient1}
+        initial="hidden"
+        animate={controls}
+        className="partners-header flex flex-col items-center gap-2"
+      >
         <h4 className="text-4xl text-green01 calSans">
           Ils nous font confiance
         </h4>
@@ -13,14 +52,19 @@ const LandingPatenary = (): JSX.Element => {
           soutenant les producteurs locaux et en luttant contre le gaspillage
           alimentaire
         </p>
-      </div>
-      <div className="partners-content grid grid-cols-4 gap-20 mt-16">
+      </motion.div>
+      <motion.div
+        variants={variants.varient2}
+        initial="hidden"
+        animate={controls}
+        className="partners-content grid grid-cols-4 gap-20 mt-16"
+      >
         {partnerList.map((item, index) => (
           <div className="container w-full">
             <img key={index} src={`/icons/${item}`} />
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

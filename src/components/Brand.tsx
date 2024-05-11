@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 const Brand = (): JSX.Element => {
   const controls = useAnimation();
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({threshold : 0.6});
 
   useEffect(() => {
     if (inView) {
@@ -14,7 +14,13 @@ const Brand = (): JSX.Element => {
 
   const variants = {
     hidden: { opacity: 0, y: 20, x: 35, scale: 0 },
-    visible: { opacity: 1, y: 0, x: 0, scale: 1, transition: { delay: 0.4 } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      scale: 1,
+      transition: { delay: 0.5, duration: 0.5 },
+    },
   };
 
   return (
