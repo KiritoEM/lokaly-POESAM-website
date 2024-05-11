@@ -15,15 +15,15 @@ const LandingFeatures = (): JSX.Element => {
   const variants = {
     variant1: {
       hidden: { opacity: 0, y: -55 },
-      visible: { opacity: 1, y: 0, transition: { delay: 0.7 } },
+      visible: { opacity: 1, y: 0, transition: { delay: 0.8 } },
     },
     variant2: {
       hidden: { opacity: 0, y: -65 },
-      visible: { opacity: 1, y: 0, transition: { delay: 1.2 } },
+      visible: { opacity: 1, y: 0, transition: { delay: 1 } },
     },
     variant3: {
       hidden: { opacity: 0, y: -75 },
-      visible: { opacity: 1, y: 0, transition: { delay: 1.4 } },
+      visible: { opacity: 1, y: 0, transition: { delay: 1.2 } },
     },
   };
 
