@@ -14,7 +14,7 @@ const Brand = (): JSX.Element => {
 
   const variants = {
     hidden: { opacity: 0, y: 20, x: 35, scale: 0 },
-    visible: { opacity: 1, y: 0, x: 0, scale: 1, transition: { delay: 0.5 } },
+    visible: { opacity: 1, y: 0, x: 0, scale: 1, transition: { delay: 0.1 } },
   };
 
   return (
