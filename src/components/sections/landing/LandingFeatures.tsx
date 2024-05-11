@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 const LandingFeatures = (): JSX.Element => {
   const controls = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.6 });
+  const { ref, inView } = useInView({ threshold: 0.5 });
 
   useEffect(() => {
     if (inView) {
@@ -18,7 +18,7 @@ const LandingFeatures = (): JSX.Element => {
       visible: {
         opacity: 1,
         y: 0,
-        transition: { delay: 0.4, duration: 0.4, type: "spring" },
+        transition: { delay: 0.4, duration: 0.5, type: "spring" },
         stiffness: 100,
       },
     },
@@ -27,7 +27,7 @@ const LandingFeatures = (): JSX.Element => {
       visible: {
         opacity: 1,
         y: 0,
-        transition: { delay: 0.6, duration: 0.5, type: "spring" },
+        transition: { delay: 0.8, duration: 0.5, type: "spring" },
         stiffness: 100,
       },
     },

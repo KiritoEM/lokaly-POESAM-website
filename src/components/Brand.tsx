@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 const Brand = (): JSX.Element => {
   const controls = useAnimation();
-  const { ref, inView } = useInView({threshold : 0.6});
+  const { ref, inView } = useInView({threshold : 0.5});
 
   useEffect(() => {
     if (inView) {
@@ -19,7 +19,7 @@ const Brand = (): JSX.Element => {
       y: 0,
       x: 0,
       scale: 1,
-      transition: { delay: 0.5, duration: 0.5 },
+      transition: { delay: 0.4, duration: 0.7, type: "spring" },
     },
   };
 
