@@ -47,20 +47,28 @@ const LandingFeatures = (): JSX.Element => {
             </span>
           </div>
         </div>
-        <div className="features flex gap-5 w-2/3 overflow-hidden">
-          <div className="w-2/4 h-96 bg-green03 rounded-lg  flex flex-col items-center p-9">
-            <h3 className="calSans text-gray02 text-3xl">Facile à installer</h3>
-            <p className="text-gray02 text-center">
-              Téléchargez, installez l’application et ....c’est prêt
-            </p>
+        <div className="features flex gap-7 w-2/3 overflow-hidden">
+          <div className="features-card w-2/4 bg-green03 rounded-lg  flex flex-col items-center p-9 gap-10">
+            <div className="header flex flex-col items-center gap-2">
+              <h3 className="calSans text-gray02 text-3xl">
+                Facile à installer
+              </h3>
+              <p className="text-gray02 text-center">
+                Téléchargez, installez l’application et ....c’est prêt
+              </p>
+            </div>
             <img src="/home-img.png" alt="" />
           </div>
-          <div className="w-2/4 h-96 bg-green03 rounded-lg  flex flex-col items-center p-9">
-            <h3 className="calSans text-gray02 text-3xl">Acces direct</h3>
-            <p className="text-gray02 text-center">
-              Accédez et Explorez nos superbes offres avec ou sans compte
-            </p>
-            <img src="/home-img.png" alt="" />
+          <div className="features-card w-2/4 bg-green04 rounded-lg flex flex-col items-center p-9 gap-10">
+            <div className="header flex flex-col items-center gap-2">
+              <h3 className="calSans text-gray02 text-3xl opacity-40	">
+                Acces direct
+              </h3>
+              <p className="text-gray02 text-center opacity-40">
+                Accédez et Explorez nos superbes offres avec ou sans compte
+              </p>
+            </div>
+            <img src="/home-img.png" className="opacity-40	" />
           </div>
         </div>
       </div>
