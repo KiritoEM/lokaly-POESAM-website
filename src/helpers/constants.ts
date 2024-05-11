@@ -15,4 +15,15 @@ const navList: InavList[] = [
   },
 ];
 
-export { navList };
+const partnerList: string[] = [
+  "radisson-blu.svg",
+  "canopee.png",
+  "tast-party.png",
+  "biogaz.png",
+  "polygon.svg",
+  "radisson-blu.svg",
+  "canopee.png",
+  "propain.svg",
+];
+
+export { navList, partnerList };

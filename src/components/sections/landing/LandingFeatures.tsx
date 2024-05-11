@@ -13,24 +13,30 @@ const LandingFeatures = (): JSX.Element => {
   }, [controls, inView]);
 
   const variants = {
-    variant1: {
+    varient1: {
       hidden: { opacity: 0, y: -55 },
-      visible: { opacity: 1, y: 0, transition: { delay: 0.8 } },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: { delay: 1.2, duration: 1, type: "spring" },
+        stiffness: 100,
+      },
     },
-    variant2: {
-      hidden: { opacity: 0, y: -65 },
-      visible: { opacity: 1, y: 0, transition: { delay: 1 } },
-    },
-    variant3: {
+    varient2: {
       hidden: { opacity: 0, y: -75 },
-      visible: { opacity: 1, y: 0, transition: { delay: 1.2 } },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: { delay: 1.5, duration: 1, type: "spring" },
+        stiffness: 100,
+      },
     },
   };
 
   return (
-    <section className="landing__features py-24 px-32 bg-white" ref={ref}>
+    <section className="landing__features pt-36 px-32 bg-white" ref={ref}>
       <motion.div
-        variants={variants.variant1}
+        variants={variants.varient1}
         initial="hidden"
         animate={controls}
         className="features-header flex flex-col items-center gap-2"
@@ -44,7 +50,7 @@ const LandingFeatures = (): JSX.Element => {
       </motion.div>
       <div className="features-content flex gap-20 mt-16">
         <motion.div
-          variants={variants.variant2}
+          variants={variants.varient2}
           initial="hidden"
           animate={controls}
           className="header w-1/3 flex flex-col gap-12"
@@ -86,7 +92,7 @@ const LandingFeatures = (): JSX.Element => {
           </div>
         </motion.div>
         <motion.div
-          variants={variants.variant3}
+          variants={variants.varient2}
           initial="hidden"
           animate={controls}
           className="features flex gap-7 w-2/3 overflow-hidden"
@@ -103,7 +109,7 @@ const LandingFeatures = (): JSX.Element => {
             <img src="/home-img.png" alt="" />
           </div>
           <motion.div
-            variants={variants.variant1}
+            variants={variants.varient2}
             initial="hidden"
             animate={controls}
             className="features-card w-2/4 bg-green04 rounded-lg flex flex-col items-center p-8 gap-10"
