@@ -24,8 +24,8 @@ const LandingHero = (): JSX.Element => {
 
   let title = "Pour une consommation";
   return (
-    <section className="landing__hero px-36 mt-28 items-start flex w-screen min-h-screen relative overflow-hidden">
-      <div className="hero-header flex justify-center relative z-30">
+    <section className="landing__hero px-36 mt-28 items-start flex w-screen max-h-screen relative overflow-hidden">
+      <div className="hero-header flex justify-center relative z-30 pb-52">
         <div className="hero-header__container w-96 flex flex-col gap-3 mt-32 ">
           <div className="title">
             <motion.h2

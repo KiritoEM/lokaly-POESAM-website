@@ -18,6 +18,7 @@ const config: Config = {
         green02: "#02260B",
         gray01: "#B3B3B3",
         gray02: "#2E3230",
+        white01: "#B8B9B9",
       },
       fontFamily: {},
     },
