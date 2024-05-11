@@ -18,11 +18,11 @@ const LandingNavResponsive = (): JSX.Element => {
       initial="hidden"
       animate={openMenu ? "visible" : "closed"}
       variants={menuVariants}
-      className={`container relative top-24 p-5 overflow-hidden lg:hidden md:flex md:justify-end ${
+      className={`container fixed  z-50 px-5 overflow-hidden lg:hidden md:flex md:justify-end ${
         openMenu ? "" : "hidden"
       }`}
     >
-      <div className="menu-items items-center bg-green02 w-full md:w-max px-0 md:px-24 py-12 rounded-xl shadow-gray-500">
+      <div className="menu-items items-center relative bg-green02 w-full md:w-max px-0 md:px-24 py-12 rounded-xl shadow-gray-500">
         <ul className="flex-col flex gap-8 items-center">
           {navList.map((item, index) => (
             <li

@@ -15,7 +15,7 @@ const LandingNav = (): JSX.Element => {
         transition={{ delay: 5.3 }}
         className="landing-nav absolute w-full top-0 z-50  bg-transparent overflow-hidden hidden lg:inline"
       >
-        <div className="nav-container flex justify-between px-10 py-8 md:py-10 md:px-16  bg-transparent">
+        <div className="nav-container flex justify-between py-10 px-16  bg-transparent">
           {/* logo */}
           <div className="logo">
             <img src="/logo.svg" alt="" />
@@ -54,7 +54,14 @@ const LandingNav = (): JSX.Element => {
           />
         </div>
       </motion.nav>
-      <nav className="landing-nav absolute w-full top-0 z-50  bg-transparent overflow-hidden lg:hidden">
+
+      {/* navbar  container responsive */}
+      <motion.nav
+        initial={{ opacity: 0, y: -37 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+        className="landing-nav fixed w-full top-0 z-50  bg-white overflow-hidden lg:hidden"
+      >
         <div className="nav-responsive-container flex justify-between px-10 py-8 md:py-10 md:px-16  bg-transparent">
           {/* logo */}
           <div className="logo">
@@ -93,7 +100,7 @@ const LandingNav = (): JSX.Element => {
             onClick={() => menuToogle()}
           />
         </div>
-      </nav>
+      </motion.nav>
       <LandingNavResponsive />
     </Fragment>
   );
