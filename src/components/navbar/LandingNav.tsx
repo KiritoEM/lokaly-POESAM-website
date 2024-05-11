@@ -10,7 +10,7 @@ const LandingNav = () => {
       transition={{ delay: 5.3 }}
       className="landing-nav absolute w-full top-0 z-50  bg-transparent overflow-hidden"
     >
-      <div className="nav-container flex justify-between py-10 px-16">
+      <div className="nav-container flex justify-between py-10 px-16  bg-transparent">
         {/* logo */}
         <div className="logo">
           <img src="/logo.svg" alt="" />

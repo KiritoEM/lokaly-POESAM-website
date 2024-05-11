@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 
 const LandingHero = (): JSX.Element => {
   const [imgPositionClass, setImgPositionClass] = useState(
-    "absolute left-0 top-0"
+    "absolute left-0 top-0 z-70"
   );
   let transition = {};
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setImgPositionClass("absolute image-position top-0");
+      setImgPositionClass("absolute image-position top-0 z-70");
       transition = {
         duration: 2,
       };
