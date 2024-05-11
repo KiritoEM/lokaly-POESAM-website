@@ -3,8 +3,10 @@ import scrollSection from "@/helpers/scroll";
 import { motion } from "framer-motion";
 import React, { Fragment } from "react";
 import LandingNavResponsive from "./LandingNavResponsive";
+import { useNav } from "@/hooks/usenav";
 
-const LandingNav = () => {
+const LandingNav = (): JSX.Element => {
+  const { menuToogle } = useNav();
   return (
     <Fragment>
       <motion.nav
@@ -47,7 +49,8 @@ const LandingNav = () => {
           <img
             src="/icons/menu-icon.png"
             alt=""
-            className="md:hidden w-8 h-8 relative top-1"
+            className="lg:hidden w-8 h-8 relative top-1"
+            onClick={() => menuToogle()}
           />
         </div>
       </motion.nav>
