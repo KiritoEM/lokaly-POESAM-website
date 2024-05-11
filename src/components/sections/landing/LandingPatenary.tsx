@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 const LandingPatenary = (): JSX.Element => {
   const controls = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.5 });
+  const { ref, inView } = useInView({ threshold: 0.4 });
 
   useEffect(() => {
     if (inView) {

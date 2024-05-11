@@ -118,9 +118,14 @@ const LandingHero = (): JSX.Element => {
       ></motion.video>
 
       {/* image pour le responsive */}
-      <div className="hero-im flex justify-center w-full">
+      <motion.div
+        initial={{ opacity: 0, y: 17, x: 30, scale: 0 }}
+        animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
+        transition={{ delay: 1 }}
+        className="hero-im flex justify-center w-full"
+      >
         <img src="/home-img.png" />
-      </div>
+      </motion.div>
     </section>
   );
 };
