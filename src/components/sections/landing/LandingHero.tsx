@@ -9,7 +9,7 @@ const LandingHero = (): JSX.Element => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setImgPositionClass("absolute ml-32");
+      setImgPositionClass("absolute image-position top-0");
       transition = {
         duration: 2,
       };
@@ -24,7 +24,7 @@ const LandingHero = (): JSX.Element => {
 
   let title = "Pour une consommation";
   return (
-    <section className="landing__hero px-44 mt-28 items-start flex w-screen relative  overflow-hidden">
+    <section className="landing__hero px-36 mt-28 items-start flex w-screen min-h-screen relative overflow-hidden">
       <div className="hero-header flex justify-center relative z-30">
         <div className="hero-header__container w-96 flex flex-col gap-3 mt-32 ">
           <div className="title">
@@ -72,7 +72,7 @@ const LandingHero = (): JSX.Element => {
         autoPlay
         muted
         transition={transition}
-        className={`hero-video z-20 ${imgPositionClass} transition-ml justify-center`}
+        className={`hero-video z-20 absolute top-0 ${imgPositionClass} transition-ml justify-center`}
       ></motion.video>
     </section>
   );
