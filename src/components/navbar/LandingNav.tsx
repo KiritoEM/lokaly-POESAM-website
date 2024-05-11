@@ -89,7 +89,7 @@ const LandingNav = (): JSX.Element => {
           <img
             src="/icons/menu-icon.png"
             alt=""
-            className="md:hidden w-8 h-8 relative top-1"
+            className="lg:hidden w-8 h-8 relative top-1"
             onClick={() => menuToogle()}
           />
         </div>
