@@ -22,8 +22,8 @@ const LandingNavResponsive = (): JSX.Element => {
         openMenu ? "" : "hidden"
       }`}
     >
-      <div className="menu-items items-center bg-green02 py-12 rounded-lg shadow-gray-500">
-        <ul className="flex-col flex gap-10 items-center">
+      <div className="menu-items items-center bg-green02 py-12 rounded-xl shadow-gray-500">
+        <ul className="flex-col flex gap-8 items-center">
           {navList.map((item, index) => (
             <li
               key={index}
