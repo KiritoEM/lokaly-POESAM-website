@@ -34,7 +34,11 @@ const LandingFeatures = (): JSX.Element => {
   };
 
   return (
-    <section className="landing__features pt-36 px-32 bg-white" ref={ref}>
+    <section
+      className="landing__features pt-36 px-32 bg-white"
+      ref={ref}
+      id="features"
+    >
       <motion.div
         variants={variants.varient1}
         initial="hidden"

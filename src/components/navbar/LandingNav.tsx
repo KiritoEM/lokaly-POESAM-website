@@ -1,4 +1,5 @@
 import { navList } from "@/helpers/constants";
+import scrollSection from "@/helpers/scroll";
 import { motion } from "framer-motion";
 import React from "react";
 
@@ -20,7 +21,15 @@ const LandingNav = () => {
         <div className="menu-items flex gap-10 items-center">
           <ul className="flex gap-10">
             {navList.map((item, index) => (
-              <li key={index} className="general-sans-medium  text-green02">
+              <li
+                key={index}
+                className="general-sans-medium  text-green02 cursor-pointer"
+                onClick={() =>
+                  scrollSection(
+                    item.scrollSectionId ? item.scrollSectionId : ""
+                  )
+                }
+              >
                 {item.label}
               </li>
             ))}

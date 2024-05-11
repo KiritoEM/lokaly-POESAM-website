@@ -3,15 +3,19 @@ import { InavList } from "@/utils/interfaces";
 const navList: InavList[] = [
   {
     label: "Accueil",
+    scrollSectionId: "",
   },
   {
     label: "A propos",
+    scrollSectionId: "features",
   },
   {
     label: "Nos partenaires",
+    scrollSectionId: "partners",
   },
   {
     label: "FAQ",
+    scrollSectionId: "FAQ",
   },
 ];
 

@@ -6,7 +6,7 @@ interface Ichildren {
 
 interface InavList {
   label: string;
-  scrollSection?: () => void;
+  scrollSectionId?: string;
 }
 
 export type { Ichildren, InavList };

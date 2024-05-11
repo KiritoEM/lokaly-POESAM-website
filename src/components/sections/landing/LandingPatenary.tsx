@@ -36,7 +36,11 @@ const LandingPatenary = (): JSX.Element => {
   };
 
   return (
-    <section className="landing__partners pt-36 px-40 bg-white" ref={ref}>
+    <section
+      className="landing__partners pt-36 px-40 bg-white"
+      ref={ref}
+      id="partners"
+    >
       <motion.div
         variants={variants.varient1}
         initial="hidden"
