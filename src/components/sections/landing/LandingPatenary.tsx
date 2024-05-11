@@ -19,7 +19,7 @@ const LandingPatenary = (): JSX.Element => {
       visible: {
         opacity: 1,
         y: 0,
-        transition: { delay: 0.4, duration: 0.5, type: "spring" },
+        transition: { delay: 0.3, duration: 0.8, type: "spring" },
         stiffness: 100,
       },
     },
@@ -29,7 +29,7 @@ const LandingPatenary = (): JSX.Element => {
         opacity: 1,
         y: 0,
         scale: 1,
-        transition: { delay: 0.9, duration: 0.5, type: "spring" },
+        transition: { delay: 0.3, duration: 0.9, type: "spring" },
         stiffness: 100,
       },
     },
@@ -37,7 +37,7 @@ const LandingPatenary = (): JSX.Element => {
 
   return (
     <section
-      className="landing__partners pt-36 px-40 bg-white"
+      className="landing__partners pt-36 px-40 bg-white hidden"
       ref={ref}
       id="partners"
     >

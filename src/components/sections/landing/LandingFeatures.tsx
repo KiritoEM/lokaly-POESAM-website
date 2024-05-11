@@ -18,7 +18,7 @@ const LandingFeatures = (): JSX.Element => {
       visible: {
         opacity: 1,
         y: 0,
-        transition: { delay: 0.4, duration: 0.5, type: "spring" },
+        transition: { delay: 0.3, duration: 0.8, type: "spring" },
         stiffness: 100,
       },
     },
@@ -27,7 +27,7 @@ const LandingFeatures = (): JSX.Element => {
       visible: {
         opacity: 1,
         y: 0,
-        transition: { delay: 0.8, duration: 0.5, type: "spring" },
+        transition: { delay: 0.4, duration: 0.9, type: "spring" },
         stiffness: 100,
       },
     },
@@ -35,7 +35,7 @@ const LandingFeatures = (): JSX.Element => {
 
   return (
     <section
-      className="landing__features pt-36 px-32 bg-white"
+      className="landing__features pt-36 px-32 bg-white hidden"
       ref={ref}
       id="features"
     >

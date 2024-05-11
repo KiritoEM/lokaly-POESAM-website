@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 const Brand = (): JSX.Element => {
   const controls = useAnimation();
-  const { ref, inView } = useInView({threshold : 0.5});
+  const { ref, inView } = useInView({ threshold: 0.5 });
 
   useEffect(() => {
     if (inView) {
@@ -19,7 +19,7 @@ const Brand = (): JSX.Element => {
       y: 0,
       x: 0,
       scale: 1,
-      transition: { delay: 0.4, duration: 0.7, type: "spring" },
+      transition: { delay: 0.4, duration: 0.8, type: "spring" },
     },
   };
 
@@ -29,7 +29,7 @@ const Brand = (): JSX.Element => {
       initial="hidden"
       animate={controls}
       variants={variants}
-      className="brand bg-green02 px-32 py-10 flex flex-wrap items-center justify-between"
+      className="brand bg-green02 px-32 py-10 flex flex-wrap items-center justify-between hidden"
     >
       <div className="partenary flex gap-4 items-center">
         <h4 className="text-6xl text-white calSans pt-2">17</h4>
