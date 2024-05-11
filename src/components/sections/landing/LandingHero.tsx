@@ -9,7 +9,7 @@ const LandingHero = (): JSX.Element => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setImgPositionClass("absolute ml-36 w-screen");
+      setImgPositionClass("absolute ml-32");
       transition = {
         duration: 2,
       };
@@ -24,7 +24,7 @@ const LandingHero = (): JSX.Element => {
 
   let title = "Pour une consommation";
   return (
-    <section className="landing__hero px-44 mt-28 items-start flex w-screen overflow-hidden">
+    <section className="landing__hero px-44 mt-28 items-start flex w-screen relative  overflow-hidden">
       <div className="hero-header flex justify-center relative z-30">
         <div className="hero-header__container w-96 flex flex-col gap-3 mt-32 ">
           <div className="title">
@@ -65,21 +65,17 @@ const LandingHero = (): JSX.Element => {
           </motion.button>
         </div>
       </div>
-      <div
-        className={`hero-video w-full overflow-hidden  z-20 ${imgPositionClass} transition-ml justify-center`}
-      >
-        <motion.video
-          src="/hero-scene.mp4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          autoPlay
-          muted
-          transition={transition}
-          className={`hero-img `}
-        ></motion.video>
-      </div>
+      <motion.video
+        src="/hero-scene.mp4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        autoPlay
+        muted
+        transition={transition}
+        className={`hero-video z-20 ${imgPositionClass} transition-ml justify-center`}
+      ></motion.video>
     </section>
   );
-}; /*  */
+};
 
 export default LandingHero;
