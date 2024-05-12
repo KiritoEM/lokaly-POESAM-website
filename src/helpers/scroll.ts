@@ -8,6 +8,7 @@ const scrollSection = (id: string) => {
       top: position,
       behavior: "smooth",
     });
+    console.log(id);
   }
 };
 

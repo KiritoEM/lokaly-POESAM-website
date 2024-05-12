@@ -6,7 +6,7 @@ import LandingNavResponsive from "./LandingNavResponsive";
 import { useNav } from "@/hooks/usenav";
 
 const LandingNav = (): JSX.Element => {
-  const { menuToogle } = useNav();
+  const { menuToogle, changeNav } = useNav();
   return (
     <Fragment>
       <motion.nav
@@ -28,11 +28,12 @@ const LandingNav = (): JSX.Element => {
                 <li
                   key={index}
                   className="general-sans-medium  text-green02 cursor-pointer"
-                  onClick={() =>
+                  onClick={() => {
                     scrollSection(
                       item.scrollSectionId ? item.scrollSectionId : ""
-                    )
-                  }
+                    );
+                    changeNav(false);
+                  }}
                 >
                   {item.label}
                 </li>

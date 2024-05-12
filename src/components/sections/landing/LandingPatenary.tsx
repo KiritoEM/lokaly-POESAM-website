@@ -56,7 +56,7 @@ const LandingPatenary = (): JSX.Element => {
         variants={variants.varient2}
         initial="hidden"
         animate={controls}
-        className="partners-content grid grid-cols-4 gap-20 mt-16"
+        className="partners-content grid grid-cols-2 md:grid-cols-4 gap-20 mt-16"
       >
         {partnerList.map((item, index) => (
           <div className="container w-full">

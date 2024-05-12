@@ -5,7 +5,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const LandingNavResponsive = (): JSX.Element => {
-  const { openMenu } = useNav();
+  const { openMenu, changeNav } = useNav();
 
   const menuVariants = {
     hidden: { opacity: 0, height: 0, transition: { duration: 0.4 } },
@@ -28,9 +28,10 @@ const LandingNavResponsive = (): JSX.Element => {
             <li
               key={index}
               className="general-sans-medium text-white text-lg cursor-pointer"
-              onClick={() =>
-                scrollSection(item.scrollSectionId ? item.scrollSectionId : "")
-              }
+              onClick={() => {
+                scrollSection(item.scrollSectionId ? item.scrollSectionId : "");
+                changeNav(false);
+              }}
             >
               {item.label}
             </li>
