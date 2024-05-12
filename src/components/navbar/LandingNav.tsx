@@ -62,7 +62,7 @@ const LandingNav = (): JSX.Element => {
         transition={{ delay: 0.5 }}
         className="landing-nav fixed w-full top-0 z-50  bg-white overflow-hidden lg:hidden"
       >
-        <div className="nav-responsive-container flex justify-between px-10 py-8 md:py-10 md:px-16  bg-transparent">
+        <div className="nav-responsive-container flex justify-between px-10 py-6  bg-transparent">
           {/* logo */}
           <div className="logo">
             <img src="/logo.svg" alt="" />

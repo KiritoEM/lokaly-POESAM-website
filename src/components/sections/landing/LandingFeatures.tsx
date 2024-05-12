@@ -4,7 +4,11 @@ import { useInView } from "react-intersection-observer";
 
 const LandingFeatures = (): JSX.Element => {
   const controls = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.4 });
+  const { ref, inView } = useInView({ threshold: 0.3 });
+
+  if (inView) {
+    console.log(inView);
+  }
 
   useEffect(() => {
     if (inView) {
@@ -18,7 +22,7 @@ const LandingFeatures = (): JSX.Element => {
       visible: {
         opacity: 1,
         y: 0,
-        transition: { delay: 0.3, duration: 0.7, type: "spring" },
+        transition: { delay: 0.4, duration: 0.8, type: "spring" },
         stiffness: 100,
       },
     },
@@ -27,7 +31,7 @@ const LandingFeatures = (): JSX.Element => {
       visible: {
         opacity: 1,
         y: 0,
-        transition: { delay: 0.4, duration: 0.8, type: "spring" },
+        transition: { delay: 0.7, duration: 0.8, type: "spring" },
         stiffness: 100,
       },
     },
@@ -39,19 +43,14 @@ const LandingFeatures = (): JSX.Element => {
       ref={ref}
       id="features"
     >
-      <motion.div
-        variants={variants.varient1}
-        initial="hidden"
-        animate={controls}
-        className="features-header flex flex-col items-center gap-2"
-      >
+      <div className="features-header flex flex-col items-center gap-2">
         <h4 className="text-4xl lg:text-5xl text-green01 calSans text-center">
           Connecter, Promouvoir, Agir
         </h4>
         <p className="text-white01 w-full lg:w-96 text-center  text-lg">
           pour une Alimentation Locale et Durable à Madagascar
         </p>
-      </motion.div>
+      </div>
       <div className="features-content flex flex-col lg:flex-row gap-20 mt-16">
         <motion.div
           variants={variants.varient2}
@@ -99,9 +98,9 @@ const LandingFeatures = (): JSX.Element => {
           variants={variants.varient2}
           initial="hidden"
           animate={controls}
-          className="features flex flex-col lg:flex-row gap-7 lg:w-2/3 overflow-hidden"
+          className="features flex flex-col md:flex-row gap-7 lg:w-2/3 overflow-hidden"
         >
-          <div className="features-card lg:w-2/4 bg-green03 rounded-lg  flex flex-col items-center p-8 gap-10 overflow-hidden">
+          <div className="features-card  md:w-1/2 lg:w-2/4 bg-green03 rounded-lg  flex flex-col items-center p-8 gap-10 overflow-hidden">
             <div className="header flex flex-col items-center gap-2">
               <h3 className="calSans text-gray02 text-3xl">
                 Facile à installer
@@ -116,7 +115,7 @@ const LandingFeatures = (): JSX.Element => {
             variants={variants.varient2}
             initial="hidden"
             animate={controls}
-            className="features-card lg:w-2/4 bg-green04 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden"
+            className="features-card  md:w-1/2 lg:w-2/4 bg-green04 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden"
           >
             <div className="header flex flex-col items-center gap-2">
               <h3 className="calSans text-gray02 text-3xl opacity-40	">

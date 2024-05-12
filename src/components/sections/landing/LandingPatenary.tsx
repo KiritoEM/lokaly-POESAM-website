@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 const LandingPatenary = (): JSX.Element => {
   const controls = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.4 });
+  const { ref, inView } = useInView({ threshold: 0.3 });
 
   useEffect(() => {
     if (inView) {
@@ -29,7 +29,7 @@ const LandingPatenary = (): JSX.Element => {
         opacity: 1,
         y: 0,
         scale: 1,
-        transition: { delay: 0.3, duration: 0.9, type: "spring" },
+        transition: { delay: 0.5, duration: 0.8, type: "spring" },
         stiffness: 100,
       },
     },
@@ -37,26 +37,21 @@ const LandingPatenary = (): JSX.Element => {
 
   return (
     <section
-      className="landing__partners pt-36 px-40 bg-white hidden"
+      className="landing__partners pt-24 lg:pt-36 px-10 lg:px-40 bg-white"
       ref={ref}
       id="partners"
     >
-      <motion.div
-        variants={variants.varient1}
-        initial="hidden"
-        animate={controls}
-        className="partners-header flex flex-col items-center gap-2"
-      >
-        <h4 className="text-4xl text-green01 calSans">
+      <div className="partners-header flex flex-col items-center gap-2">
+        <h4 className="text-4xl text-green01 calSans text-center">
           Ils nous font confiance
         </h4>
-        <p className="text-white01  text-center  text-lg">
+        <p className="text-white01  text-center  lg:text-lg">
           Grâce à des partenariats solides, nous sommes en mesure de vous offrir
           une sélection diversifiée de produits locaux de qualité, tout en
           soutenant les producteurs locaux et en luttant contre le gaspillage
           alimentaire
         </p>
-      </motion.div>
+      </div>
       <motion.div
         variants={variants.varient2}
         initial="hidden"

@@ -9,9 +9,12 @@
 }
 
 .landing__partners {
-    display: none;
 
     .partners-header p {
         width: 46rem;
+
+        @media screen and (max-width : 768px) {
+            width: 100%;
+        }
     }
 }
