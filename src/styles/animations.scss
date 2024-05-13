@@ -5,3 +5,12 @@
 .image-position {
     margin-left: calc(0.5rem + 10vw);
 }
+
+.dotlottie-container {
+    width: 100% !important;
+
+    image {
+        width: 1500px !important;
+        height: 1500px !important;
+    }
+}

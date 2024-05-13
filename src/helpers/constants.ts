@@ -3,7 +3,7 @@ import { InavList } from "@/utils/interfaces";
 const navList: InavList[] = [
   {
     label: "Accueil",
-    scrollSectionId: "",
+    scrollSectionId: "hero",
   },
   {
     label: "A propos",

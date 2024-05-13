@@ -1,36 +1,8 @@
 import { useEffect } from "react";
-import { delay, motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const Brand = (): JSX.Element => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.5 });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
-
-  const variants = {
-    hidden: { opacity: 0, y: 20, x: 35, scale: 0 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      x: 0,
-      scale: 1,
-      transition: { delay: 0.4, duration: 0.8, type: "spring" },
-    },
-  };
-
   return (
-    <motion.section
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={variants}
-      className="brand bg-green02 px-10 md:px-32 py-10 flex flex-wrap gap-8 lg:gap-0 items-center justify-between"
-    >
+    <section className="brand bg-green02 px-10 md:px-32 py-10 flex flex-wrap gap-8 lg:gap-0 items-center justify-between">
       <div className="partenary flex  gap-5 md:gap-4 items-center">
         <h4 className="text-5xl lg:text-6xl text-white calSans pt-2">17</h4>
         <p className="text-white01">
@@ -60,7 +32,7 @@ const Brand = (): JSX.Element => {
           réalisés
         </p>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

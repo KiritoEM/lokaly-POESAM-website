@@ -31,7 +31,7 @@ const LandingFeatures = (): JSX.Element => {
       visible: {
         opacity: 1,
         y: 0,
-        transition: { delay: 0.7, duration: 0.8, type: "spring" },
+        transition: { delay: 0.4, duration: 0.8, type: "spring" },
         stiffness: 100,
       },
     },
@@ -39,7 +39,7 @@ const LandingFeatures = (): JSX.Element => {
 
   return (
     <section
-      className="landing__features pt-24 lg:pt-36 px-10 lg:px-32 bg-white"
+      className="landing__features pt-24 lg:pt-30 px-10 lg:px-28 bg-white"
       ref={ref}
       id="features"
     >
@@ -102,7 +102,7 @@ const LandingFeatures = (): JSX.Element => {
         >
           <div className="features-card  md:w-1/2 lg:w-2/4 bg-green03 rounded-lg  flex flex-col items-center p-8 gap-10 overflow-hidden  cursor-pointer">
             <div className="header flex flex-col items-center gap-2">
-              <h3 className="calSans text-gray02 text-3xl">
+              <h3 className="calSans text-gray02 text-3xl text-center">
                 Facile à installer
               </h3>
               <p className="text-gray02 text-center">
@@ -118,7 +118,7 @@ const LandingFeatures = (): JSX.Element => {
             className="features-card  md:w-1/2 lg:w-2/4 bg-green04 hover:bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden cursor-pointer"
           >
             <div className="header flex flex-col items-center gap-2">
-              <h3 className="calSans text-gray02 text-3xl opacity-40 hover:opacity-100">
+              <h3 className="calSans text-gray02 text-3xl opacity-40 hover:opacity-100 text-center">
                 Acces direct
               </h3>
               <p className="text-gray02 text-center opacity-40 hover:opacity-100">
