@@ -115,17 +115,20 @@ const LandingFeatures = (): JSX.Element => {
             variants={variants.varient2}
             initial="hidden"
             animate={controls}
-            className="features-card  md:w-1/2 lg:w-2/4 bg-green04 hover:bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden cursor-pointer"
+            className="features-card  md:w-1/2 lg:w-2/4 bg-green03 lg:bg-green04 hover:bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden cursor-pointer"
           >
             <div className="header flex flex-col items-center gap-2">
-              <h3 className="calSans text-gray02 text-3xl opacity-40 hover:opacity-100 text-center">
+              <h3 className="calSans text-gray02 text-3xl lg:opacity-40 hover:opacity-100  text-center">
                 Acces direct
               </h3>
-              <p className="text-gray02 text-center opacity-40 hover:opacity-100">
+              <p className="text-gray02 text-center lg:opacity-40 hover:opacity-100">
                 Accédez et Explorez nos superbes offres avec ou sans compte
               </p>
             </div>
-            <img src="/home-img.png" className="opacity-40	hover:opacity-100" />
+            <img
+              src="/home-img.png"
+              className="lg:opacity-40	hover:opacity-100"
+            />
           </motion.div>
         </motion.div>
       </div>

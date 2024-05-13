@@ -28,7 +28,7 @@ const LandingHero = (): JSX.Element => {
   return (
     <Fragment>
       <section
-        className="landing__hero px-10 md:px-20 lg:pl-36  lg:pr-60 pt-20 mt-24 md:mt-40 lg:mt-28 items-start flex flex-col gap-20 md:flex-row w-screen  relative overflow-hidden pb-20  justify-between pb-20 md:pb-32"
+        className="landing__hero px-10 md:px-20 lg:pl-36  lg:pr-60 pt-20 mt-24 lg:mt-40 lg:mt-28 items-start flex flex-col gap-20 md:flex-row w-screen  relative overflow-hidden pb-20  justify-between pb-20 md:pb-32"
         id="hero"
       >
         <div className="hero-header flex md:justify-center relative z-30">
