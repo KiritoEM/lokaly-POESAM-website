@@ -1,5 +1,7 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { DotLottiePlayer } from "@dotlottie/react-player";
+import "@dotlottie/react-player/dist/index.css";
 
 const LandingHero = (): JSX.Element => {
   const [imgPositionClass, setImgPositionClass] = useState(
@@ -31,7 +33,7 @@ const LandingHero = (): JSX.Element => {
             <motion.h2
               initial={{ opacity: 0, y: 17, x: 30, scale: 0 }}
               animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-              transition={{ delay: 5 }}
+              transition={{ delay: 2 }}
               className="hero-title calSans text-green02 leading-tight flex flex-col w-full hidden lg:flex"
             >
               {title}
@@ -49,7 +51,7 @@ const LandingHero = (): JSX.Element => {
             <motion.span
               initial={{ opacity: 0, y: 20, x: 35, scale: 0 }}
               animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-              transition={{ delay: 5 }}
+              transition={{ delay: 2 }}
               className="hero-title calSans text-green01 leading-tight flex flex-row  hidden lg:flex"
             >
               reponsable
@@ -68,7 +70,7 @@ const LandingHero = (): JSX.Element => {
           <motion.p
             initial={{ opacity: 0, y: -55, x: -30 }}
             animate={{ opacity: 1, y: 0, x: 0 }}
-            transition={{ delay: 5.2 }}
+            transition={{ delay: 2 }}
             className="text-gray01 lg:text-lg w-full hidden lg:flex"
           >
             Valorisez les produits locaux et contribuez à un mode de vie plus
@@ -88,7 +90,7 @@ const LandingHero = (): JSX.Element => {
           <motion.button
             initial={{ opacity: 0, y: -45, x: -25, scale: 0 }}
             animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-            transition={{ delay: 5.2 }}
+            transition={{ delay: 2 }}
             className="text-white bg-green01 rounded-3xl px-6 py-3 flex items-center gap-2 w-max mt-8 hidden lg:flex"
           >
             Télécharger l' app{" "}
@@ -107,7 +109,13 @@ const LandingHero = (): JSX.Element => {
           </motion.button>
         </div>
       </div>
-      <motion.video
+      <DotLottiePlayer
+        autoplay={true}
+        loop={true}
+        src={"/lottie.json"}
+        style={{ width: "60em", height: "100vh", objectFit: "cover" }}
+      />
+      {/* <motion.video
         src="/hero-scene.mp4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -115,7 +123,7 @@ const LandingHero = (): JSX.Element => {
         muted
         transition={transition}
         className={`hero-video z-20 absolute top-0 ${imgPositionClass} transition-ml justify-center hidden lg:flex`}
-      ></motion.video>
+      ></motion.video> */}
 
       {/* image pour le responsive */}
       <motion.div

@@ -100,7 +100,7 @@ const LandingFeatures = (): JSX.Element => {
           animate={controls}
           className="features flex flex-col md:flex-row gap-7 lg:w-2/3 overflow-hidden"
         >
-          <div className="features-card  md:w-1/2 lg:w-2/4 bg-green03 rounded-lg  flex flex-col items-center p-8 gap-10 overflow-hidden">
+          <div className="features-card  md:w-1/2 lg:w-2/4 bg-green03 rounded-lg  flex flex-col items-center p-8 gap-10 overflow-hidden  cursor-pointer">
             <div className="header flex flex-col items-center gap-2">
               <h3 className="calSans text-gray02 text-3xl">
                 Facile à installer
@@ -115,17 +115,17 @@ const LandingFeatures = (): JSX.Element => {
             variants={variants.varient2}
             initial="hidden"
             animate={controls}
-            className="features-card  md:w-1/2 lg:w-2/4 bg-green04 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden"
+            className="features-card  md:w-1/2 lg:w-2/4 bg-green04 hover:bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden cursor-pointer"
           >
             <div className="header flex flex-col items-center gap-2">
-              <h3 className="calSans text-gray02 text-3xl opacity-40	">
+              <h3 className="calSans text-gray02 text-3xl opacity-40 hover:opacity-100">
                 Acces direct
               </h3>
-              <p className="text-gray02 text-center opacity-40">
+              <p className="text-gray02 text-center opacity-40 hover:opacity-100">
                 Accédez et Explorez nos superbes offres avec ou sans compte
               </p>
             </div>
-            <img src="/home-img.png" className="opacity-40	" />
+            <img src="/home-img.png" className="opacity-40	hover:opacity-100" />
           </motion.div>
         </motion.div>
       </div>
