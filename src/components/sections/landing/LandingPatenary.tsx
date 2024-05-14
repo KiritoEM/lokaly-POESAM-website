@@ -29,7 +29,7 @@ const LandingPatenary = (): JSX.Element => {
         opacity: 1,
         y: 0,
         scale: 1,
-        transition: { delay: 0.4, duration: 0.8, type: "spring" },
+        transition: { delay: 0.4, duration: 0.6, type: "spring" },
         stiffness: 100,
       },
     },

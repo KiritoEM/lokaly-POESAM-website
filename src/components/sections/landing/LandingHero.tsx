@@ -64,7 +64,7 @@ const LandingHero = (): JSX.Element => {
         <motion.div
           initial={{ opacity: 0, y: 17, x: 30, scale: 0 }}
           animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
+          transition={{ delay: 1, duration: 0.9 }}
           className="hero-img flex justify-center w-full md:w-96"
         >
           <img src="/home-img.png" className="md:w-full" />
