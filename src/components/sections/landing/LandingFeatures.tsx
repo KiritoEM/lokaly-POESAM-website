@@ -17,22 +17,12 @@ const LandingFeatures = (): JSX.Element => {
   }, [controls, inView]);
 
   const variants = {
-    varient1: {
-      hidden: { opacity: 0, y: -55 },
-      visible: {
-        opacity: 1,
-        y: 0,
-        transition: { delay: 0.4, duration: 0.8, type: "spring" },
-        stiffness: 100,
-      },
-    },
     varient2: {
       hidden: { opacity: 0, y: -55 },
       visible: {
         opacity: 1,
         y: 0,
-        transition: { delay: 0.4, duration: 0.7, type: "spring" },
-        stiffness: 100,
+        transition: { delay: 0.4, duration: 0.6, type: "spring" },
       },
     },
   };

@@ -53,7 +53,7 @@ const LandingHero = (): JSX.Element => {
             </FadeReveal>
 
             <FadeReveal>
-              <button className="text-white bg-green01 rounded-3xl px-6 py-3 flex items-center gap-2 w-max mt-8">
+              <button className="text-white bg-green01 hover:bg-green02 rounded-3xl px-6 py-3 flex items-center gap-2 w-max mt-8">
                 Télécharger l' app{" "}
                 <img src="/icons/download-icon.svg" className=" w-5" alt="" />
               </button>
