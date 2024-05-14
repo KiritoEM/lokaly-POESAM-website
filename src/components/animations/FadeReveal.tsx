@@ -13,7 +13,7 @@ const FadeReveal = ({ children }: Ichildren): JSX.Element => {
       <motion.div
         initial={{ opacity: 0, y: 35 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.6 }}
+        transition={{ delay: 0.4, duration: 0.7 }}
       >
         {children}
       </motion.div>

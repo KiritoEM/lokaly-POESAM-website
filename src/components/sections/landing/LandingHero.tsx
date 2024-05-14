@@ -3,25 +3,24 @@ import { motion } from "framer-motion";
 import { Fragment, useEffect, useState } from "react";
 
 const LandingHero = (): JSX.Element => {
-  const [imgPositionClass, setImgPositionClass] = useState(
-    "absolute left-0 top-0 z-70"
-  );
-  let transition = {};
+  // const [imgPositionClass, setImgPositionClass] = useState(
+  //   "absolute left-0 top-0 z-70"
+  // );
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setImgPositionClass("absolute image-position top-0 z-70");
-      transition = {
-        duration: 2,
-      };
-    }, 5000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setImgPositionClass("absolute image-position top-0 z-70");
+  //     transition = {
+  //       duration: 2,
+  //     };
+  //   }, 5000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  transition = {
-    duration: 2,
-  };
+  // transition = {
+  //   duration: 2,
+  // };
 
   let title = "Pour une consommation";
   return (
@@ -34,78 +33,38 @@ const LandingHero = (): JSX.Element => {
           <div className="hero-header__container md:w-72 lg:w-96 flex flex-col gap-3 md:mt-14 lg:mt-20">
             <div className="title">
               <FadeReveal>
-                <h2 className="hero-title calSans text-green02 leading-tight flex flex-col w-full hidden lg:flex">
+                <h2 className="hero-title calSans text-green02 leading-tight flex flex-col w-full">
                   {title}
                 </h2>
               </FadeReveal>
-              {/* h2 responsive */}
-              <motion.h2
-                initial={{ opacity: 0, y: 17, x: 30, scale: 0 }}
-                animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-                transition={{ delay: 1 }}
-                className="hero-title calSans text-green02 leading-tight flex flex-col w-full  flex lg:hidden"
-              >
-                {title}
-              </motion.h2>
+
               <FadeReveal>
-                <span className="hero-title calSans text-green01 leading-tight flex flex-row  hidden lg:flex">
+                <span className="hero-title calSans text-green01 leading-tight flex flex-row">
                   reponsable
                 </span>
               </FadeReveal>
-
-              {/* span responsive */}
-              <motion.span
-                initial={{ opacity: 0, y: 20, x: 35, scale: 0 }}
-                animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-                transition={{ delay: 1.4 }}
-                className="hero-title calSans text-green01 leading-tight flex flex-row  flex lg:hidden"
-              >
-                reponsable
-              </motion.span>
             </div>
 
             <FadeReveal>
-              <p className="text-gray01 lg:text-lg w-full hidden lg:flex">
+              <p className="text-gray01 lg:text-lg w-full">
                 Valorisez les produits locaux et contribuez à un mode de vie
                 plus durable.
               </p>
             </FadeReveal>
 
-            {/* p responsive */}
-            <motion.p
-              initial={{ opacity: 0, y: -55, x: -30 }}
-              animate={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ delay: 1.6 }}
-              className="text-gray01 lg:text-lg w-full flex lg:hidden"
-            >
-              Valorisez les produits locaux et contribuez à un mode de vie plus
-              durable.
-            </motion.p>
-
             <FadeReveal>
-              <button className="text-white bg-green01 rounded-3xl px-6 py-3 flex items-center gap-2 w-max mt-8 hidden lg:flex">
+              <button className="text-white bg-green01 rounded-3xl px-6 py-3 flex items-center gap-2 w-max mt-8">
                 Télécharger l' app{" "}
                 <img src="/icons/download-icon.svg" className=" w-5" alt="" />
               </button>
             </FadeReveal>
-
-            {/* button responsive */}
-            <motion.button
-              initial={{ opacity: 0, y: -45, x: -25, scale: 0 }}
-              animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-              transition={{ delay: 1.8 }}
-              className="text-white bg-green01 rounded-3xl px-6 py-3 flex items-center gap-2 w-max mt-8  flex lg:hidden"
-            >
-              Télécharger l' app{" "}
-              <img src="/icons/download-icon.svg" className=" w-5" alt="" />
-            </motion.button>
           </div>
         </div>
 
         <motion.div
           initial={{ opacity: 0, y: 17, x: 30, scale: 0 }}
           animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-          transition={{ delay: 2 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
           className="hero-img flex justify-center w-full md:w-96"
         >
           <img src="/home-img.png" className="md:w-full" />
