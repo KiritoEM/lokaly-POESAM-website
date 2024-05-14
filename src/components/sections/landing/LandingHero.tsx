@@ -26,7 +26,7 @@ const LandingHero = (): JSX.Element => {
   return (
     <Fragment>
       <section
-        className="landing__hero px-10 md:px-20 lg:pl-36  lg:pr-60 pt-16 mt-24 lg:mt-18 lg:mt-28 items-start flex flex-col gap-20 md:flex-row w-screen  relative overflow-hidden pb-20  justify-between pb-20 md:pb-32"
+        className="landing__hero px-10 md:px-20 lg:pl-40  lg:pr-52 pt-16 mt-24 lg:mt-18 lg:mt-28 items-start flex flex-col gap-20 md:flex-row w-screen  relative overflow-hidden pb-20  justify-between pb-20 md:pb-32"
         id="hero"
       >
         <div className="hero-header flex md:justify-center relative z-30">
@@ -61,14 +61,16 @@ const LandingHero = (): JSX.Element => {
           </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 17, x: 30, scale: 0 }}
-          animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-          transition={{ delay: 1, duration: 0.9 }}
-          className="hero-img flex justify-center w-full md:w-96"
-        >
-          <img src="/home-img.png" className="md:w-full" />
-        </motion.div>
+        <div className="w-full flex justify-center md:w-5/12">
+          <motion.div
+            initial={{ opacity: 0, y: 17, x: 30, scale: 0 }}
+            animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
+            transition={{ delay: 1, duration: 0.9 }}
+            className="hero-img flex justify-center w-full relative"
+          >
+            <img src="/home-img.png" className="md:max-w-full	md:h-auto" />
+          </motion.div>
+        </div>
         {/* <DotLottiePlayer
         autoplay={true}
         loop={true}
