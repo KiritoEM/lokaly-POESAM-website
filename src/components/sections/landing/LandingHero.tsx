@@ -28,20 +28,28 @@ const LandingHero = (): JSX.Element => {
   return (
     <Fragment>
       <section
-        className="landing__hero px-10 md:px-20 lg:pl-36  lg:pr-60 pt-20 mt-24 lg:mt-40 lg:mt-28 items-start flex flex-col gap-20 md:flex-row w-screen  relative overflow-hidden pb-20  justify-between pb-20 md:pb-32"
+        className="landing__hero px-10 md:px-20 lg:pl-36  lg:pr-60 pt-16 mt-24 lg:mt-18 lg:mt-28 items-start flex flex-col gap-20 md:flex-row w-screen  relative overflow-hidden pb-20  justify-between pb-20 md:pb-32"
         id="hero"
       >
         <div className="hero-header flex md:justify-center relative z-30">
-          <div className="hero-header__container md:w-72 lg:w-90 flex flex-col gap-3 md:mt-14 lg:mt-20 ">
+          <div className="hero-header__container md:w-72 lg:w-96 flex flex-col gap-3 md:mt-14 lg:mt-20">
             <div className="title">
-              <motion.h2
-                initial={{ opacity: 0, y: 17, x: 30, scale: 0 }}
-                animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-                transition={{ delay: 1 }}
-                className="hero-title calSans text-green02 leading-tight flex flex-col w-full hidden lg:flex"
+              <div
+                style={{
+                  overflow: "hidden",
+                  position: "relative",
+                  width: "fit-content",
+                }}
               >
-                {title}
-              </motion.h2>
+                <motion.h2
+                  initial={{ opacity: 0, y: 35 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.25, duration: 0.5 }}
+                  className="hero-title calSans text-green02 leading-tight flex flex-col w-full hidden lg:flex"
+                >
+                  {title}
+                </motion.h2>
+              </div>
 
               {/* h2 responsive */}
               <motion.h2
@@ -53,9 +61,9 @@ const LandingHero = (): JSX.Element => {
                 {title}
               </motion.h2>
               <motion.span
-                initial={{ opacity: 0, y: 20, x: 35, scale: 0 }}
-                animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-                transition={{ delay: 1 }}
+                initial={{ opacity: 0, y: 35 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25, duration: 0.5 }}
                 className="hero-title calSans text-green01 leading-tight flex flex-row  hidden lg:flex"
               >
                 reponsable
@@ -118,7 +126,7 @@ const LandingHero = (): JSX.Element => {
           initial={{ opacity: 0, y: 17, x: 30, scale: 0 }}
           animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
           transition={{ delay: 2 }}
-          className="hero-img flex justify-center w-full md:w-2/6"
+          className="hero-img flex justify-center w-full md:w-96"
         >
           <img src="/home-img.png" className="md:w-full" />
         </motion.div>
