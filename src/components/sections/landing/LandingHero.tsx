@@ -1,7 +1,6 @@
+import FadeReveal from "@/components/animations/FadeReveal";
 import { motion } from "framer-motion";
 import { Fragment, useEffect, useState } from "react";
-import { DotLottiePlayer } from "@dotlottie/react-player";
-import "@dotlottie/react-player/dist/index.css";
 
 const LandingHero = (): JSX.Element => {
   const [imgPositionClass, setImgPositionClass] = useState(
@@ -34,23 +33,11 @@ const LandingHero = (): JSX.Element => {
         <div className="hero-header flex md:justify-center relative z-30">
           <div className="hero-header__container md:w-72 lg:w-96 flex flex-col gap-3 md:mt-14 lg:mt-20">
             <div className="title">
-              <div
-                style={{
-                  overflow: "hidden",
-                  position: "relative",
-                  width: "fit-content",
-                }}
-              >
-                <motion.h2
-                  initial={{ opacity: 0, y: 35 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.25, duration: 0.5 }}
-                  className="hero-title calSans text-green02 leading-tight flex flex-col w-full hidden lg:flex"
-                >
+              <FadeReveal>
+                <h2 className="hero-title calSans text-green02 leading-tight flex flex-col w-full hidden lg:flex">
                   {title}
-                </motion.h2>
-              </div>
-
+                </h2>
+              </FadeReveal>
               {/* h2 responsive */}
               <motion.h2
                 initial={{ opacity: 0, y: 17, x: 30, scale: 0 }}
@@ -60,14 +47,11 @@ const LandingHero = (): JSX.Element => {
               >
                 {title}
               </motion.h2>
-              <motion.span
-                initial={{ opacity: 0, y: 35 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.25, duration: 0.5 }}
-                className="hero-title calSans text-green01 leading-tight flex flex-row  hidden lg:flex"
-              >
-                reponsable
-              </motion.span>
+              <FadeReveal>
+                <span className="hero-title calSans text-green01 leading-tight flex flex-row  hidden lg:flex">
+                  reponsable
+                </span>
+              </FadeReveal>
 
               {/* span responsive */}
               <motion.span
@@ -79,15 +63,13 @@ const LandingHero = (): JSX.Element => {
                 reponsable
               </motion.span>
             </div>
-            <motion.p
-              initial={{ opacity: 0, y: -55, x: -30 }}
-              animate={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ delay: 1 }}
-              className="text-gray01 lg:text-lg w-full hidden lg:flex"
-            >
-              Valorisez les produits locaux et contribuez à un mode de vie plus
-              durable.
-            </motion.p>
+
+            <FadeReveal>
+              <p className="text-gray01 lg:text-lg w-full hidden lg:flex">
+                Valorisez les produits locaux et contribuez à un mode de vie
+                plus durable.
+              </p>
+            </FadeReveal>
 
             {/* p responsive */}
             <motion.p
@@ -99,15 +81,13 @@ const LandingHero = (): JSX.Element => {
               Valorisez les produits locaux et contribuez à un mode de vie plus
               durable.
             </motion.p>
-            <motion.button
-              initial={{ opacity: 0, y: -45, x: -25, scale: 0 }}
-              animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-              transition={{ delay: 1 }}
-              className="text-white bg-green01 rounded-3xl px-6 py-3 flex items-center gap-2 w-max mt-8 hidden lg:flex"
-            >
-              Télécharger l' app{" "}
-              <img src="/icons/download-icon.svg" className=" w-5" alt="" />
-            </motion.button>
+
+            <FadeReveal>
+              <button className="text-white bg-green01 rounded-3xl px-6 py-3 flex items-center gap-2 w-max mt-8 hidden lg:flex">
+                Télécharger l' app{" "}
+                <img src="/icons/download-icon.svg" className=" w-5" alt="" />
+              </button>
+            </FadeReveal>
 
             {/* button responsive */}
             <motion.button

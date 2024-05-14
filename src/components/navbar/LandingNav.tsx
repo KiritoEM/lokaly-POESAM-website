@@ -28,7 +28,7 @@ const LandingNav = (): JSX.Element => {
               {navList.map((item, index) => (
                 <li
                   key={index}
-                  className="general-sans-medium  text-green02 cursor-pointer"
+                  className="general-sans-medium  text-green02 cursor-pointer hover:text-green01"
                   onClick={() =>
                     scrollSection(
                       item.scrollSectionId ? item.scrollSectionId : ""
