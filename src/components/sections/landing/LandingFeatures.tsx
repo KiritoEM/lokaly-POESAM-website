@@ -22,7 +22,7 @@ const LandingFeatures = (): JSX.Element => {
       visible: {
         opacity: 1,
         y: 0,
-        transition: { delay: 0.4, duration: 0.6, type: "spring" },
+        transition: { delay: 0.4, duration: 0.8, type: "spring" },
       },
     },
   };
