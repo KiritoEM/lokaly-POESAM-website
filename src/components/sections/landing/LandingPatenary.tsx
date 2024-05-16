@@ -56,11 +56,11 @@ const LandingPatenary = (): JSX.Element => {
         variants={variants.varient2}
         initial="hidden"
         animate={controls}
-        className="partners-content grid grid-cols-1 md:grid-cols-1 gap-20 mt-5"
+        className="partners-content grid grid-cols-1 md:grid-cols-1 gap-20 mt-14"
       >
         {partnerList.map((item, index) => (
           <div className="container w-full flex justify-center" key={index}>
-            <img src={`/icons/${item}`} className="w-72" />
+            <img src={`/icons/${item}`} className="w-48 md:w-28 object-cover" />
           </div>
         ))}
       </motion.div>

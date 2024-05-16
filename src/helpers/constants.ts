@@ -1,4 +1,4 @@
-import { InavList } from "@/utils/interfaces";
+import { IFAQCard, InavList } from "@/utils/interfaces";
 
 const navList: InavList[] = [
   {
@@ -21,4 +21,11 @@ const navList: InavList[] = [
 
 const partnerList: string[] = ["partner1.png"];
 
-export { navList, partnerList };
+const FAQData: IFAQCard[] = [
+  {
+    title: "Comment fonctionne Lokaly ?",
+    text: "Lokaly connecte les producteurs, commerçants et consommateurs via une plateforme digitale. Les producteurs inscrivent leurs produits, les commerçants peuvent gérer leurs stocks et les consommateurs peuvent acheter des produits locaux frais, réduisant ainsi le gaspillage alimentaire et soutenant l'économie locale.",
+  },
+];
+
+export { navList, partnerList, FAQData };

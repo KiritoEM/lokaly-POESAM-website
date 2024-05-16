@@ -1,4 +1,5 @@
 import Brand from "@/components/Brand";
+import LandingFAQ from "@/components/sections/landing/LandingFAQ";
 import LandingFeatures from "@/components/sections/landing/LandingFeatures";
 import LandingHero from "@/components/sections/landing/LandingHero";
 import LandingPatenary from "@/components/sections/landing/LandingPatenary";
@@ -16,6 +17,7 @@ const Landing = (): JSX.Element => {
         <Brand />
         <LandingFeatures />
         <LandingPatenary />
+        <LandingFAQ />
       </LandingLayout>
     </section>
   );

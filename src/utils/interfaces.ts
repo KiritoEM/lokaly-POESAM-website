@@ -27,10 +27,16 @@ interface IDefaultNavContext {
   changeNav: (state: boolean) => null;
 }
 
+interface IFAQCard {
+  title: string;
+  text: string;
+}
+
 export type {
   Ichildren,
   InavList,
   IDefaultNavContext,
   INavContext,
   INavProvider,
+  IFAQCard,
 };

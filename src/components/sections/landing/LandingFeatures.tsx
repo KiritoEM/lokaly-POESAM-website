@@ -41,7 +41,7 @@ const LandingFeatures = (): JSX.Element => {
           pour une Alimentation Locale et Durable à Madagascar
         </p>
       </div>
-      <div className="features-content flex flex-col lg:flex-row gap-20 mt-16">
+      <div className="features-content flex flex-col lg:flex-row gap-20 mt-14">
         <motion.div
           variants={variants.varient2}
           initial="hidden"

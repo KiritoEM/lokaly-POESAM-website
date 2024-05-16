@@ -23,6 +23,8 @@ const config: Config = {
         gray03: "#BABABA",
         white01: "#B8B9B9",
         white02: "#F5F5F5",
+        blue01: "#170F49",
+        blue02: "#6F6C90",
       },
       fontFamily: {},
     },
