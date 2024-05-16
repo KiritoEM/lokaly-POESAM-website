@@ -3,24 +3,6 @@ import { motion } from "framer-motion";
 import { Fragment, useEffect, useState } from "react";
 
 const LandingHero = (): JSX.Element => {
-  // const [imgPositionClass, setImgPositionClass] = useState(
-  //   "absolute left-0 top-0 z-70"
-  // );
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setImgPositionClass("absolute image-position top-0 z-70");
-  //     transition = {
-  //       duration: 2,
-  //     };
-  //   }, 5000);
-
-  //   return () => clearTimeout(timer);
-  // }, []);
-
-  // transition = {
-  //   duration: 2,
-  // };
 
   let title = "Pour une consommation";
   return (

@@ -80,7 +80,7 @@ const LandingFeatures = (): JSX.Element => {
               id="basic-addon1"
               data-twe-input-group-text-ref
             >
-              <img src="/icons/send-icon.png" className="w-20" />
+              <img src="/icons/send-icon.svg" className="w-20" />
             </span>
           </div>
         </motion.div>

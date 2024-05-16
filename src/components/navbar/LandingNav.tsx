@@ -13,7 +13,7 @@ const LandingNav = (): JSX.Element => {
       <motion.nav
         initial={{ opacity: 0, y: -37 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
+        transition={{ delay: 0.7 }}
         className="landing-nav fixed lg:absolute w-full top-0 z-50  bg-white lg:bg-transparent overflow-hidden"
       >
         <div className="nav-responsive-container flex justify-between px-10 lg:px-20 bg-transparent py-6 md:py-8 bg-transparent">
@@ -48,7 +48,7 @@ const LandingNav = (): JSX.Element => {
 
           {/* menu icon */}
           <img
-            src="/icons/menu-icon.png"
+            src="/icons/menu-icon.svg"
             alt=""
             className="lg:hidden w-8 h-8 relative top-1"
             onClick={() => menuToogle()}
