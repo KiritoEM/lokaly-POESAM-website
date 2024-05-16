@@ -19,7 +19,7 @@ const LandingNav = (): JSX.Element => {
         <div className="nav-responsive-container flex justify-between px-10 lg:px-20 bg-transparent py-6 md:py-8 bg-transparent">
           {/* logo */}
           <div className="logo">
-            <img src="/logo.svg" alt="" />
+            <img src="/logo.svg" alt="logo" />
           </div>
 
           {/* menu-items */}
@@ -50,7 +50,7 @@ const LandingNav = (): JSX.Element => {
           <img
             src="/icons/menu-icon.svg"
             alt=""
-            className="lg:hidden w-8 h-8 relative top-1"
+            className="lg:hidden w-7 h-7 relative top-1 object-contain"
             onClick={() => menuToogle()}
           />
         </div>
