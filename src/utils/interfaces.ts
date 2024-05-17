@@ -30,6 +30,13 @@ interface IDefaultNavContext {
 interface IFAQCard {
   title: string;
   text: string;
+  isActive: boolean;
+  handleToggle: () => void;
+}
+
+interface IinputComponent01 {
+  type: string;
+  placeholder: string;
 }
 
 export type {
@@ -39,4 +46,5 @@ export type {
   INavContext,
   INavProvider,
   IFAQCard,
+  IinputComponent01,
 };

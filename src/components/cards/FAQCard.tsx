@@ -1,12 +1,8 @@
 import { IFAQCard } from "@/utils/interfaces";
 import { useState } from "react";
 
-interface FAQCardProps extends IFAQCard {
-    isActive: boolean;
-    handleToggle: () => void;
-}
 
-const FAQCard = ({ text, title, isActive, handleToggle }: FAQCardProps): JSX.Element => {
+const FAQCard = ({ text, title, isActive, handleToggle }: IFAQCard): JSX.Element => {
     const [isRotating, setIsRotating] = useState<boolean>(false);
 
     //fonction pour la rotation de l' icone
