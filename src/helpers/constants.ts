@@ -28,7 +28,7 @@ const FAQData: IFAQCard[] = [
   },
   {
     title: "Comment puis-je m'inscrire en tant que producteur ou commerçant ?",
-    text: "Lokaly connecte les producteurs, commerçants et consommateurs via une plateforme digitale. Les producteurs inscrivent leurs produits, les commerçants peuvent gérer leurs stocks et les consommateurs peuvent acheter des produits locaux frais, réduisant ainsi le gaspillage alimentaire et soutenant l'économie locale.",
+    text: "Pour rejoindre Lokaly en tant que vendeur, vous devez nous contacter pour obtenir un compte vendeur. Envoyez-nous un message via notre formulaire de contact ou par email, et nous vous guiderons dans le processus de création de votre compte.",
   },
   {
     title: "Quels types de produits puis-je trouver sur Lokaly ?",
