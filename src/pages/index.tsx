@@ -9,7 +9,7 @@ import Head from "next/head";
 
 const Landing = (): JSX.Element => {
   return (
-    <section className="landing">
+    <section className="landing w-screen overflow-hidden">
       <Head>
         <title>Bienvenue sur Lokaly</title>
       </Head>

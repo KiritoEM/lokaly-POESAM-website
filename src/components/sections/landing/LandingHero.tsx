@@ -6,9 +6,9 @@ const LandingHero = (): JSX.Element => {
 
   let title = "Pour une consommation";
   return (
-    <Fragment>
+    <div className="container mx-auto overflow-hidden">
       <section
-        className="landing__hero px-10 md:px-20 lg:pl-40  lg:pr-52 pt-16 mt-24 lg:mt-18 lg:mt-28 items-start flex flex-col gap-20 md:flex-row w-screen  relative overflow-hidden pb-20  justify-between pb-20 md:pb-32"
+        className="landing__hero px-10 md:px-20 lg:pl-40 lg:pr-52 pt-16 mt-24  lg:mt-0 items-start flex flex-col gap-20 md:flex-row w-full  relative overflow-hidden pb-20  justify-between pb-20 md:pb-32"
         id="hero"
       >
         <div className="hero-header flex md:justify-center relative z-30">
@@ -53,25 +53,8 @@ const LandingHero = (): JSX.Element => {
             <img src="/home-img.png" className="md:max-w-full	md:h-auto" />
           </motion.div>
         </div>
-        {/* <DotLottiePlayer
-        autoplay={true}
-        loop={true}
-        src={"/lottie.json"}
-        style={{ width: "658em", height: "25em", objectFit: "cover" }}
-      /> */}
-        {/* <motion.video
-        src="/hero-scene.mp4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        autoPlay
-        muted
-        transition={transition}
-        className={`hero-video z-20 absolute top-0 ${imgPositionClass} transition-ml justify-center hidden lg:flex`}
-      ></motion.video> */}
-
-        {/* image pour le responsive */}
       </section>
-    </Fragment>
+    </div>
   );
 };
 

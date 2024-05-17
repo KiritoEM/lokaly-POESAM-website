@@ -59,7 +59,7 @@ const LandingPatenary = (): JSX.Element => {
         className="partners-content grid grid-cols-1 md:grid-cols-1 gap-20 mt-14"
       >
         {partnerList.map((item, index) => (
-          <div className="container w-full flex justify-center" key={index}>
+          <div className="logo-container w-full flex justify-center" key={index}>
             <img src={`/icons/${item}`} className="w-48 md:w-28 object-cover" />
           </div>
         ))}
