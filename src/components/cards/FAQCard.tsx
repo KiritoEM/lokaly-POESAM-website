@@ -16,7 +16,7 @@ const FAQCard = ({ text, title, isActive, handleToggle }: IFAQCard): JSX.Element
     return (
         <article
             className={`FAQ-card flex w-full rounded-xl cursor-pointer ${isActive ? "sticky-open" : "sticky-close"}  ${isActive ? "border-2 border-green01 items-start gap-12 p-10" : "items-center justify-between  py-5 md:py-6 px-8 md:px-10"}`}
-            onClick={() => { handleToggle(); handleImageClick() }}
+            onClick={() => { handleToggle && handleToggle(); handleImageClick() }}
         >
             <div className={`header w-11/12	md:w-full ${isActive && "flex flex-col gap-5"}`}>
                 <h3 className="text-xl md:text-2xl text-blue01 calSans">{title}</h3>
