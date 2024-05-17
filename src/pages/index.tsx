@@ -1,4 +1,5 @@
 import Brand from "@/components/Brand";
+import LandingContact from "@/components/sections/landing/LandingContact";
 import LandingFAQ from "@/components/sections/landing/LandingFAQ";
 import LandingFeatures from "@/components/sections/landing/LandingFeatures";
 import LandingHero from "@/components/sections/landing/LandingHero";
@@ -18,6 +19,7 @@ const Landing = (): JSX.Element => {
         <LandingFeatures />
         <LandingPatenary />
         <LandingFAQ />
+        <LandingContact />
       </LandingLayout>
     </section>
   );

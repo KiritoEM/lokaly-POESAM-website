@@ -10,9 +10,8 @@ const LandingNavResponsive = (): JSX.Element => {
   return (
     <div className="container fixed  z-50 px-5 overflow-hidden lg:hidden md:flex  w-screen">
       <div
-        className={`menu-items items-center relative bg-green02 w-full md:w-max px-0 md:px-24 py-12 rounded-xl shadow-gray-500 ${
-          openMenu ? "open-menu" : "close-menu"
-        }`}
+        className={`menu-items items-center relative bg-green02 w-full md:w-max px-0 md:px-24 py-12 rounded-xl shadow-gray-500 ${openMenu ? "open-menu" : "close-menu"
+          }`}
       >
         <ul className="flex-col flex gap-8 items-center">
           {navList.map((item, index) => (
