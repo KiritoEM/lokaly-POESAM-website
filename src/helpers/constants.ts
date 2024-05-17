@@ -19,7 +19,7 @@ const navList: InavList[] = [
   },
 ];
 
-const partnerList: string[] = ["partner1.png"];
+const partnerList: string[] = ["partner1.png", "partner2.png"];
 
 const FAQData: IFAQCard[] = [
   {

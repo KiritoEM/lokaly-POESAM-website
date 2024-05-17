@@ -52,18 +52,20 @@ const LandingPatenary = (): JSX.Element => {
           alimentaire
         </p>
       </div>
-      <motion.div
-        variants={variants.varient2}
-        initial="hidden"
-        animate={controls}
-        className="partners-content grid grid-cols-1 md:grid-cols-1 gap-20 mt-14"
-      >
-        {partnerList.map((item, index) => (
-          <div className="logo-container w-full flex justify-center" key={index}>
-            <img src={`/icons/${item}`} className="w-32 md:w-28 object-cover" />
-          </div>
-        ))}
-      </motion.div>
+      <div className="container2 w-full flex justify-center">
+        <motion.div
+          variants={variants.varient2}
+          initial="hidden"
+          animate={controls}
+          className="partners-content grid grid-cols-2 md:grid-cols-2 mt-14 w-max flex justify-center gap-14"
+        >
+          {partnerList.map((item, index) => (
+            <div className="logo-container flex items-center" key={index}>
+              <img src={`/icons/${item}`} className="w-20 md:w-24 object-contain" />
+            </div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 };

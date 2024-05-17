@@ -32,7 +32,7 @@ const LandingFooter = (): JSX.Element => {
                     <img src="/logo.svg" alt="" />
                 </div>
                 <div className="copyright">
-                    <p className="text-green05">© 2024 Lokaly. Tout droits réservés. </p>
+                    <p className="text-green05 text-center">© 2024 Lokaly. Tout droits réservés. </p>
                 </div>
                 <div className="social-icons flex gap-1">
                     <img src="/icons/fb-icon.svg" alt="fb" />
