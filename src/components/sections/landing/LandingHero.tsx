@@ -50,7 +50,7 @@ const LandingHero = (): JSX.Element => {
             transition={{ delay: 1, duration: 0.9 }}
             className="hero-img flex justify-center w-full relative"
           >
-            <img src="/home-img.png" className="md:max-w-full	md:h-auto" />
+            <img src="/home-img.svg" className="object-contain md:max-w-full	md:h-auto" />
           </motion.div>
         </div>
       </section>

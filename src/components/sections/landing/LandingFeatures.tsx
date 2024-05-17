@@ -100,7 +100,7 @@ const LandingFeatures = (): JSX.Element => {
                   Téléchargez, installez l’application et ....c’est prêt
                 </p>
               </div>
-              <img src="/home-img.png" alt="" />
+              <img src="/home-img.svg" alt="" />
             </div>
             <motion.div
               variants={variants.varient2}
@@ -117,7 +117,7 @@ const LandingFeatures = (): JSX.Element => {
                 </p>
               </div>
               <img
-                src="/home-img.png"
+                src="/home-img.svg"
                 className="lg:opacity-40	hover:opacity-100"
               />
             </motion.div>
