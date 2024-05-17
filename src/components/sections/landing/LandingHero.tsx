@@ -8,7 +8,7 @@ const LandingHero = (): JSX.Element => {
   return (
     <div className="container mx-auto overflow-hidden">
       <section
-        className="landing__hero px-10 md:px-20 lg:pl-40 lg:pr-52 pt-16 mt-24  lg:mt-0 items-start flex flex-col gap-20 md:flex-row w-full  relative overflow-hidden pb-20  justify-between pb-20 md:pb-32"
+        className="landing__hero px-10 md:px-20 lg:pl-40 lg:pr-52 pt-10 mt-24 lg:mt-0 items-start flex flex-col gap-20 md:flex-row w-full relative overflow-hidden pb-20 justify-between pb-20 md:pb-32"
         id="hero"
       >
         <div className="hero-header flex md:justify-center relative z-30">
@@ -43,7 +43,7 @@ const LandingHero = (): JSX.Element => {
           </div>
         </div>
 
-        <div className="w-full flex justify-center md:w-5/12">
+        <div className="hero-img w-full flex justify-center md:w-5/12">
           <motion.div
             initial={{ opacity: 0, y: 17, x: 30, scale: 0 }}
             animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}

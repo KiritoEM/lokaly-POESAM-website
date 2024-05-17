@@ -31,10 +31,10 @@ const Brand = (): JSX.Element => {
 
   return (
     <section
-      className="brand px-10 md:px-32 py-10 bg-green02 "
+      className="brand px-10 md:px-20 lg:px-32 py-10 bg-green02 "
       ref={ref}
     >
-      <div className="container  mx-auto w-full flex flex-wrap gap-8 lg:gap-0  items-center justify-between">
+      <div className="container mx-auto w-full flex flex-wrap gap-10 md:gap-12 lg:gap-0 items-center justify-center lg:justify-between">
         <div className="partenary flex  gap-5 md:gap-4 items-center">
           <h4 className="text-5xl lg:text-6xl text-white calSans pt-2">
             {counts[0]}

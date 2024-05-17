@@ -1,3 +1,30 @@
+.landing__hero {
+    .hero-header {
+
+        &__container {
+            @media screen and (min-width : 1024px) and (max-width : 1279px) {
+                width: 20rem !important;
+            }
+
+            .hero-title {
+                font-size: 4vw;
+
+                @media screen and (max-width : 767px) {
+                    font-size: 2.2rem;
+                }
+
+                @media screen and (min-width : 1024px) and (max-width : 1279px) {
+                    font-size: 2.5rem;
+                }
+
+                @media screen and (min-width : 768px) and (max-width : 1024px) {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+}
+
 .landing__features {
     .features-card {
         height: 28rem;
@@ -13,7 +40,7 @@
     .partners-header p {
         width: 46rem;
 
-        @media screen and (max-width : 768px) {
+        @media screen and (max-width : 1023px) {
             width: 100%;
         }
     }

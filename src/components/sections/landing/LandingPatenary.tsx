@@ -37,7 +37,7 @@ const LandingPatenary = (): JSX.Element => {
 
   return (
     <section
-      className="landing__partners pt-24 lg:pt-30 px-10 lg:px-40 bg-white"
+      className="landing__partners pt-24 lg:pt-30 px-10 md:px-16 lg:px-40 bg-white"
       ref={ref}
       id="partners"
     >
@@ -60,7 +60,7 @@ const LandingPatenary = (): JSX.Element => {
       >
         {partnerList.map((item, index) => (
           <div className="logo-container w-full flex justify-center" key={index}>
-            <img src={`/icons/${item}`} className="w-48 md:w-28 object-cover" />
+            <img src={`/icons/${item}`} className="w-32 md:w-28 object-cover" />
           </div>
         ))}
       </motion.div>

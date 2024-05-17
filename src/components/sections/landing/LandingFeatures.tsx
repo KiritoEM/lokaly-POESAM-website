@@ -30,7 +30,7 @@ const LandingFeatures = (): JSX.Element => {
   return (
     <div className="container mx-auto">
       <section
-        className="landing__features pt-24 lg:pt-30 px-10 lg:px-20 bg-white"
+        className="landing__features pt-24 lg:pt-30 px-10  md:px-16 lg:px-20 bg-white"
         ref={ref}
         id="features"
       >
@@ -38,7 +38,7 @@ const LandingFeatures = (): JSX.Element => {
           <h4 className="text-4xl lg:text-5xl text-green01 calSans text-center">
             Connecter, Promouvoir, Agir
           </h4>
-          <p className="text-white01 w-full lg:w-96 text-center  tlg:text-lg">
+          <p className="text-white01 w-full lg:w-96 text-center lg:text-lg">
             pour une Alimentation Locale et Durable à Madagascar
           </p>
         </div>
