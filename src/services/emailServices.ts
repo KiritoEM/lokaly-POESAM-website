@@ -1,15 +1,22 @@
 import axios from "axios";
 
-type emailData = {
-  userEmail: string;
-  message: string;
-  phoneNumber: string;
-  userName: string;
-};
-
-export default function emailServices(emailData: emailData) {
+export default function emailServices() {
   const sendEmail = async (e: any) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const userName = form["name"].value;
+    const userEmail = form["email"].value;
+    const userMessage = form["message"].value;
+    const phoneNumber = form["phoneNumber"].value;
+
+    const emailData = {
+      userName: userName,
+      userEmail: userEmail,
+      message: userMessage,
+      phoneNumber: phoneNumber,
+    };
+
+    console.log(emailData);
 
     try {
       const res = await axios.post("/api/sendEmail", emailData, {
@@ -18,6 +25,7 @@ export default function emailServices(emailData: emailData) {
         },
       });
       alert(res.data.message);
+      console.log(res.data.message);
     } catch (err) {
       console.error(err);
     }

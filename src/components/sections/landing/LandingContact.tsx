@@ -1,4 +1,5 @@
 import InputComponent01 from "@/components/inputs/InputComponent01";
+import emailServices from "@/services/emailServices";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
@@ -6,6 +7,7 @@ import { useInView } from "react-intersection-observer";
 const LandingContact = (): JSX.Element => {
     const controls = useAnimation();
     const { ref, inView } = useInView({ threshold: 0.3 });
+    const { sendEmail } = emailServices()
 
     useEffect(() => {
         if (inView) {
@@ -49,15 +51,15 @@ const LandingContact = (): JSX.Element => {
                     initial="hidden"
                     animate={controls}
                     className="contact-form w-full md:w-1/2 lg:w-3/5 h-max bg-white rounded-xl p-9 flex flex-col gap-6"
-                    onSubmit={(e : any)=> }
+                    onSubmit={(e: any) => sendEmail(e)}
                 >
 
                     <InputComponent01 type="text" placeholder="Votre nom" name="name" />
-                    <InputComponent01 type="email" placeholder="Adresse mail" />
-                    <InputComponent01 type="email" placeholder="Numéro de téléphone" />
+                    <InputComponent01 type="email" placeholder="Adresse mail" name="email" />
+                    <InputComponent01 type="number" placeholder="Numéro de téléphone" name="phoneNumber" />
 
                     {/* text-area */}
-                    <textarea placeholder="Votre message" className="w-full h-40 border border-blue01 opacity-30 placeholder:text-blue01 py-4 px-4 rounded-md text-sm"></textarea>
+                    <textarea placeholder="Votre message" name="message" className="w-full h-40 border border-blue01 opacity-30 placeholder:text-blue01 py-4 px-4 rounded-md text-sm"></textarea>
                     <button type="submit" className="text-sm bg-green01 w-max px-12 py-3 rounded-xl text-white mt-6">Envoyer</button>
                 </motion.form>
             </section>
