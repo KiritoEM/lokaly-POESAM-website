@@ -2,15 +2,26 @@
     transition: margin-left 1s ease-in-out;
 }
 
-.image-position {
-    margin-left: calc(0.5rem + 10vw);
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-.dotlottie-container {
-    width: 100% !important;
+.rotate {
+    animation: rotate 0.3s ease-in-out;
+}
 
-    image {
-        width: 1500px !important;
-        height: 1500px !important;
-    }
+.sticky-open {
+    transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    height: 100%;
+}
+
+.sticky-close {
+    transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    height: max-content;
 }
