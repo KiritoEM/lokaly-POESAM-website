@@ -41,7 +41,7 @@ const LandingNav = (): JSX.Element => {
                 ))}
               </ul>
               <div className="contact-btn">
-                <button className="bg-green02 hover:bg-green01 rounded-3xl py-3 text-white px-6 general-sans-medium">
+                <button className="bg-green02 hover:bg-green01 rounded-3xl py-3 text-white px-6 general-sans-medium" onClick={() => { scrollSection("contact"); changeNav(false) }}>
                   Nous contacter
                 </button>
               </div>

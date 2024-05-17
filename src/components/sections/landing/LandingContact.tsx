@@ -2,10 +2,10 @@ import InputComponent01 from "@/components/inputs/InputComponent01";
 
 const LandingContact = (): JSX.Element => {
     return (
-        <div className="container mx-auto">
-            <section className="landing__contact bg-[url('/contact-bg.svg')] py-24 mt-3 lg:py-30 px-10 md:pl-12 md:pr-10 lg:pl-36 lg:pr-40 w-full bg-cover bg-no-repeat bg-bottom flex flex-col md:flex-row  items-end gap-12 md:gap-10">
+        <div className="container mx-auto" id="contact">
+            <section className="landing__contact bg-[url('/contact-bg.svg')] pb-24 px-10 md:pl-12  md:pr-10 lg:pl-36 lg:pr-40 mt-24  w-full bg-cover bg-no-repeat bg-bottom flex flex-col md:flex-row  items-end gap-12 md:gap-10">
                 <div className="contact-header md:w-1/2 lg:w-3/5 flex flex-col gap-3 md:mb-20">
-                    <h2 className="text-3xl lg:text-4xl text-blue01 calSans">Prenez contact avec nous</h2>
+                    <h2 className="text-3xl md:text-text-3xl lg:text-4xl text-blue01 calSans">Prenez contact avec nous</h2>
                     <p className="text-blue02 md:text-lg">Vous avez quelque chose à ajouter? Un partenariat à discuter? ou quelque chose à faire passer?
                         Remplissez le formulaire suivant</p>
                 </div>
