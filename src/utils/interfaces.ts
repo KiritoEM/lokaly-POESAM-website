@@ -30,8 +30,8 @@ interface IDefaultNavContext {
 interface IFAQCard {
   title: string;
   text: string;
-  isActive: boolean;
-  handleToggle: () => void;
+  isActive?: boolean;
+  handleToggle?: () => void;
 }
 
 interface IinputComponent01 {

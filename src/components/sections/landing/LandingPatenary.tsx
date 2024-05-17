@@ -42,7 +42,7 @@ const LandingPatenary = (): JSX.Element => {
       id="partners"
     >
       <div className="partners-header flex flex-col items-center gap-2">
-        <h4 className="text-4xl text-green01 calSans text-center">
+        <h4 className="text-3xl md:text-4xl text-green01 calSans text-center">
           Ils nous font confiance
         </h4>
         <p className="text-white01  text-center  lg:text-lg">

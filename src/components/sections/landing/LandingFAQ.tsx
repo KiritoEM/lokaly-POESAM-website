@@ -11,9 +11,9 @@ const LandingFAQ = (): JSX.Element => {
 
     return (
         <div className="container mx-auto overflow-hidden">
-            <section className="landing__FAQ py-24 lg:pt-30 px-10 lg:px-56 bg-white">
+            <section className="landing__FAQ pt-24 lg:pt-30 px-10 lg:px-56 bg-white">
                 <div className="FAQ-header flex flex-col items-center gap-2">
-                    <h4 className="text-4xl text-green01 calSans text-center">
+                    <h4 className="text-3xl md:text-4xl text-green01 calSans text-center">
                         Faire aux questions
                     </h4>
                     <p className="text-white01 text-center lg:text-lg">

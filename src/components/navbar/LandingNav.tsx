@@ -20,7 +20,7 @@ const LandingNav = (): JSX.Element => {
           <div className="nav-responsive-container flex justify-between px-10 lg:px-20 bg-transparent py-6 md:py-8 bg-transparent">
             {/* logo */}
             <div className="logo">
-              <img src="/logo.svg" alt="logo" />
+              <img src="/logo.svg" alt="logo" className="w-24 md:w-auto" />
             </div>
 
             {/* menu-items */}

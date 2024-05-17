@@ -42,7 +42,7 @@ const LandingFeatures = (): JSX.Element => {
             pour une Alimentation Locale et Durable à Madagascar
           </p>
         </div>
-        <div className="features-content flex flex-col lg:flex-row gap-20 mt-14">
+        <div className="features-content flex flex-col lg:flex-row  gap-12 md:gap-20 mt-14">
           <motion.div
             variants={variants.varient2}
             initial="hidden"
@@ -50,7 +50,7 @@ const LandingFeatures = (): JSX.Element => {
             className="header w-full lg:w-1/3 flex flex-col gap-12"
           >
             <div className="text-container flex flex-col gap-5">
-              <h3 className="text-3xl calSans text-gray02">
+              <h3 className="text-2xl md:text-3xl calSans text-gray02">
                 Moins de gaspillage, Plus de soutien aux producteurs, <br /> Une
                 différence délicieuse
               </h3>
