@@ -44,18 +44,22 @@ const LandingContact = (): JSX.Element => {
                     <p className="text-blue02 md:text-lg">Vous avez quelque chose à ajouter? Un partenariat à discuter? ou quelque chose à faire passer?
                         Remplissez le formulaire suivant</p>
                 </motion.div>
-                <motion.div
+                <motion.form
                     variants={variants.varient2}
                     initial="hidden"
-                    animate={controls} className="contact-form w-full md:w-1/2 lg:w-3/5 h-max bg-white rounded-xl p-9 flex flex-col gap-6">
-                    <InputComponent01 type="text" placeholder="Votre nom" />
+                    animate={controls}
+                    className="contact-form w-full md:w-1/2 lg:w-3/5 h-max bg-white rounded-xl p-9 flex flex-col gap-6"
+                    onSubmit={(e : any)=> }
+                >
+
+                    <InputComponent01 type="text" placeholder="Votre nom" name="name" />
                     <InputComponent01 type="email" placeholder="Adresse mail" />
                     <InputComponent01 type="email" placeholder="Numéro de téléphone" />
 
                     {/* text-area */}
                     <textarea placeholder="Votre message" className="w-full h-40 border border-blue01 opacity-30 placeholder:text-blue01 py-4 px-4 rounded-md text-sm"></textarea>
-                    <button className="text-sm bg-green01 w-max px-12 py-3 rounded-xl text-white mt-6">Envoyer</button>
-                </motion.div>
+                    <button type="submit" className="text-sm bg-green01 w-max px-12 py-3 rounded-xl text-white mt-6">Envoyer</button>
+                </motion.form>
             </section>
         </div>
     );

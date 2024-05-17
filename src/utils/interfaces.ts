@@ -37,6 +37,7 @@ interface IFAQCard {
 interface IinputComponent01 {
   type: string;
   placeholder: string;
+  name?: string;
 }
 
 export type {

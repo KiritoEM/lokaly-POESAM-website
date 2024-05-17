@@ -10,7 +10,7 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   if (req.method === "POST") {
-    const { userEmail, message, phoneNumber } = req.body;
+    const { userEmail, message, phoneNumber, userName } = req.body;
 
     //configuration du transporter
     let transporter = nodemailer.createTransport({
@@ -26,7 +26,7 @@ export default async function handler(
       await transporter.sendMail({
         from: "lokaly<loickemadesemadisson@gmail.com>",
         to: userEmail,
-        subject: `message venant de l' email ${userEmail} , numéro mobile: ${phoneNumber}`,
+        subject: `message venant de l'utilisateur ${userName} avec l'email: ${userEmail} , numéro mobile: ${phoneNumber}`,
         text: message,
       });
       res.status(200).json({ message: "Email envoyé avec succès" });
