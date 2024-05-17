@@ -8,7 +8,7 @@ const LandingNavResponsive = (): JSX.Element => {
   const { openMenu, changeNav } = useNav();
 
   return (
-    <div className="nav-respons-container fixed top-32  z-50 px-5 overflow-hidden lg:hidden md:flex md:justify-end  w-screen">
+    <div className="nav-responsive-container fixed top-24  z-50 px-5 overflow-hidden lg:hidden md:flex md:justify-end  w-screen">
       <div
         className={`menu-items items-center relative bg-green02 w-full md:w-max px-0 md:px-24 py-12 rounded-xl shadow-gray-500 ${openMenu ? "open-menu" : "close-menu"
           }`}
