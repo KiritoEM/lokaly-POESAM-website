@@ -29,3 +29,15 @@
     transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
     height: max-content;
 }
+
+.open-menu {
+    height: auto;
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.close-menu {
+    height: 0;
+    transition: 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+    padding: 0;
+}
