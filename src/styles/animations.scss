@@ -16,6 +16,10 @@
     animation: rotate 0.3s ease-in-out;
 }
 
+.rotate-respons {
+    transform: rotate(-275deg);
+}
+
 .sticky-open {
     transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
     height: 100%;
