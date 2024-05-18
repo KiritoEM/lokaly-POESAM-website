@@ -9,6 +9,10 @@ import LandingLayout from "@/layout/LandingLayout";
 import Head from "next/head";
 
 const Landing = (): JSX.Element => {
+  if (process.env.NEXT_PUBLIC_NODE_URL) {
+    console.log(process.env.NEXT_PUBLIC_NODE_URL)
+  }
+
   return (
     <section className="landing w-screen overflow-hidden">
       <Head>

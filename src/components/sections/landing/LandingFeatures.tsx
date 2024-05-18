@@ -1,13 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { delay, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import FirebaseEmailServices from "@/services/firebase/FirebaseEmailServices";
 
 const LandingFeatures = (): JSX.Element => {
   const controls = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.3 });
+  const { addEmail } = FirebaseEmailServices();
+  const [email, setEmail] = useState<string>("");
+
+  if (email) {
+    console.log(email)
+  }
 
   if (inView) {
     console.log(inView);
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value)
   }
 
   useEffect(() => {
@@ -75,13 +86,16 @@ const LandingFeatures = (): JSX.Element => {
                 className="min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem]  outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-gray03 data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-gray03 dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-gray03 [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-1 text-gray03"
                 id="exampleFormControlInput"
                 placeholder="votre adresse email"
+                onChange={handleChange}
               />
               <span
                 className="flex items-center whitespace-nowrap"
                 id="basic-addon1"
                 data-twe-input-group-text-ref
               >
-                <img src="/icons/send-icon.svg" className="w-20" />
+                <button onClick={() => { addEmail(email); console.log("clické") }}>
+                  <img src="/icons/send-icon.svg" className="w-20" />
+                </button>
               </span>
             </div>
           </motion.div>

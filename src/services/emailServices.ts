@@ -19,7 +19,7 @@ export default function emailServices() {
     console.log(emailData);
 
     try {
-      const res = await axios.post("/api/sendEmail", emailData, {
+      const res = await axios.post("/api/emailContact", emailData, {
         headers: {
           "Content-Type": "application/json",
         },
