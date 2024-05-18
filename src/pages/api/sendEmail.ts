@@ -24,7 +24,7 @@ export default async function handler(
     //envoi de l' email
     try {
       await transporter.sendMail({
-        from: "lokaly<loickemadesemadisson@gmail.com>",
+        from: `lokaly<${process.env.EMAIL_SENDER}>`,
         to: userEmail,
         subject: `message venant de l'utilisateur ${userName} avec l'email: ${userEmail} , numéro mobile: ${phoneNumber}`,
         text: message,
