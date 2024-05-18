@@ -7,7 +7,7 @@ type Data = {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<any>
 ) {
   if (req.method === "POST") {
     const { userEmail, message, phoneNumber, userName } = req.body;
@@ -31,7 +31,7 @@ export default async function handler(
       });
       res.status(200).json({ message: "Email envoyé avec succès" });
     } catch (err) {
-      res.status(500).json({ message: "Erreur lors de l'envoi de l'email" });
+      res.status(500).json({ message: "Erreur lors de l'envoi de l'email", err });
       console.error(err);
     }
   } else {
