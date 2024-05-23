@@ -1,4 +1,3 @@
-import nodemailer from "nodemailer";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { transporter } from "@/helpers/nodemailerHelper";
 
@@ -119,7 +118,7 @@ export default async function handler(
             <h1 class="text-center darkGreen large">Accusé de réception</h1>
         </div>
     
-        <svg id="logo" width="172" height="60" viewBox="0 0 172 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg id="logo" width="172" height="60" viewBox="0 0 172 60" fill="none">
             <path
                 d="M36.7863 4.5014C36.1373 4.15529 35.3596 4.1509 34.7068 4.48966L26.0719 8.97045C25.0435 9.50411 23.7772 9.10304 23.2436 8.07465C22.7099 7.04625 23.111 5.77996 24.1394 5.24631L32.7742 0.765518C34.6536 -0.209694 36.8926 -0.197058 38.7607 0.799309L47.0802 5.23638C48.1026 5.78161 48.4893 7.05234 47.9441 8.07465C47.3988 9.09695 46.1281 9.4837 45.1058 8.93847L36.7863 4.5014Z"
                 fill="#F77F00" />
@@ -189,7 +188,7 @@ export default async function handler(
     //envoi de l' email
     try {
       await transporter.sendMail({
-        from: `Lokaly<${process.env.EMAIL_SENDER}>`,
+        from: `Lokaly<${process.env.NEXT_PUBLIC_EMAIL_SENDER}>`,
         to: userEmail,
         subject: `Message venant de l'utilisateur ${userName} avec l'email: ${userEmail}, numéro mobile: ${phoneNumber}`,
         text: message,

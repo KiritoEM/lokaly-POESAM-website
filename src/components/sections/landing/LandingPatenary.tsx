@@ -2,8 +2,10 @@ import { partnerList } from "@/helpers/constants";
 import { useEffect } from "react";
 import { delay, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/router";
 
 const LandingPatenary = (): JSX.Element => {
+  const router = useRouter()
   const controls = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.3 });
 
@@ -60,8 +62,8 @@ const LandingPatenary = (): JSX.Element => {
           className="partners-content grid grid-cols-2 md:grid-cols-2 mt-14 w-max flex justify-center gap-14"
         >
           {partnerList.map((item, index) => (
-            <div className="logo-container flex items-center" key={index}>
-              <img src={`/icons/${item}`} className="w-20 md:w-24 object-contain" />
+            <div className="logo-container flex items-center cursor-pointer" key={index}>
+              <img src={`/icons/${item.img}`} className="w-20 md:w-24 object-contain" onClick={() => router.push(item.link)} />
             </div>
           ))}
         </motion.div>

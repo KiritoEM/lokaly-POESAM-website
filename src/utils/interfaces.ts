@@ -40,6 +40,11 @@ interface IinputComponent01 {
   name?: string;
 }
 
+interface Ipartners{
+  img: string;
+  link: string
+}
+
 export type {
   Ichildren,
   InavList,
@@ -48,4 +53,5 @@ export type {
   INavProvider,
   IFAQCard,
   IinputComponent01,
+  Ipartners
 };
