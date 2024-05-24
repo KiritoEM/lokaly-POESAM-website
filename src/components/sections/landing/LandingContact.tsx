@@ -39,10 +39,10 @@ const LandingContact = (): JSX.Element => {
             <section className="landing__contact bg-[url('/contact-bg.svg')] pb-24 px-10 md:pl-12  md:pr-10 lg:pl-36 lg:pr-40 mt-24  w-full bg-cover bg-no-repeat bg-bottom">
                 <motion.div variants={variants.varient2}
                     initial="hidden"
-                    animate={controls} className="cat relative top-7 flex justify-end">
+                    animate={controls} className="cat relative z-40 top-7 flex justify-end">
                     <img src="/cat.svg" alt="" />
                 </motion.div>
-                <div className="flex flex-col md:flex-row  items-end gap-12 md:gap-10">
+                <div className="flex flex-col md:flex-row  items-end gap-12 md:gap-10 relative z-30">
                     <motion.div
                         variants={variants.varient1}
                         initial="hidden"

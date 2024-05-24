@@ -13,11 +13,22 @@ interface INavProvider {
   children?: ReactNode;
 }
 
+interface IServiceProvider {
+  children?: ReactNode;
+}
+
 interface INavContext {
   openMenu: boolean;
   openOverlay: boolean;
   menuToogle: () => void;
   changeNav: (state: boolean) => void;
+}
+
+interface IServiceContext {
+  loading: boolean;
+  emailSent: boolean;
+  loadingState: (state: boolean) => void;
+  sendEmail: () => void;
 }
 
 interface IDefaultNavContext {
@@ -55,4 +66,6 @@ export type {
   IFAQCard,
   IinputComponent01,
   Ipartners,
+  IServiceContext,
+  IServiceProvider,
 };
