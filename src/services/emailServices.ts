@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 
 export default function emailServices() {
-  const { emailState } = userServiceContext();
+  const { emailState, loadingState } = userServiceContext();
 
   const sendEmail = async (e: any) => {
     e.preventDefault();
@@ -29,6 +29,7 @@ export default function emailServices() {
         },
       });
       if (res.status === 200) {
+        loadingState(false);
         emailState(true);
       }
     } catch (err) {

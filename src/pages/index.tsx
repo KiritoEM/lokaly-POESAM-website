@@ -6,13 +6,12 @@ import LandingFeatures from "@/components/sections/landing/LandingFeatures";
 import LandingFooter from "@/components/sections/landing/LandingFooter";
 import LandingHero from "@/components/sections/landing/LandingHero";
 import LandingPatenary from "@/components/sections/landing/LandingPatenary";
+import { userServiceContext } from "@/hooks/serviceContext";
 import LandingLayout from "@/layout/LandingLayout";
 import Head from "next/head";
 
 const Landing = (): JSX.Element => {
-  if (process.env.NEXT_PUBLIC_NODE_URL) {
-    console.log(process.env.NEXT_PUBLIC_NODE_URL)
-  }
+  const { loading } = userServiceContext()
 
   return (
     <section className="landing w-screen overflow-hidden">
@@ -28,7 +27,7 @@ const Landing = (): JSX.Element => {
         <LandingContact />
         <LandingFooter />
       </LandingLayout>
-      {/* <Loading /> */}
+      {loading && <Loading text="Envoi de l' email en cours" />}
     </section>
   );
 };
