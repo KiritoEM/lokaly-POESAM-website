@@ -1,12 +1,10 @@
 import { useAnimation, motion } from "framer-motion";
-import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 const LandingFooter = (): JSX.Element => {
     const controls = useAnimation();
     const { ref, inView } = useInView({ threshold: 0.3 });
-    const router = useRouter()
 
     useEffect(() => {
         if (inView) {
@@ -37,9 +35,14 @@ const LandingFooter = (): JSX.Element => {
                     <p className="text-green05 text-center">© 2024 Lokaly. Tout droits réservés. </p>
                 </div>
                 <div className="social-icons flex gap-1">
-                    <img src="/icons/fb-icon.svg" alt="fb" className="cursor-pointer" onClick={() => router.push("https://www.facebook.com/profile.php?id=61559917253920")} />
-                    <img src="/icons/insta-icon.svg" alt="insta" className="cursor-pointer" />
+                    <a href="https://www.facebook.com/profile.php?id=61559917253920" target="_blank" rel="noopener noreferrer">
+                        <img src="/icons/fb-icon.svg" alt="Facebook" className="cursor-pointer" />
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=0345503761" target="_blank" rel="noopener noreferrer">
+                        <img src="/icons/whatsapp-icon.svg" alt="WhatsApp" className="cursor-pointer" />
+                    </a>
                 </div>
+
             </footer>
         </motion.div>
     );
