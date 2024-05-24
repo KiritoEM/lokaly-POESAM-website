@@ -40,9 +40,10 @@ interface IinputComponent01 {
   name?: string;
 }
 
-interface Ipartners{
+interface Ipartners {
   img: string;
-  link: string
+  link: string;
+  colspan?: number;
 }
 
 export type {
@@ -53,5 +54,5 @@ export type {
   INavProvider,
   IFAQCard,
   IinputComponent01,
-  Ipartners
+  Ipartners,
 };

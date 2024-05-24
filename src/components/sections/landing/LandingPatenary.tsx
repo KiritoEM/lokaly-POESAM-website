@@ -50,7 +50,7 @@ const LandingPatenary = (): JSX.Element => {
         <p className="text-white01  text-center  lg:text-lg">
           Grâce à des partenariats solides, nous sommes en mesure de vous offrir
           une sélection diversifiée de produits locaux de qualité, tout en
-          soutenant les producteurs locaux et en luttant contre le gaspillage
+          soutenant les producteurs locaux et en -luttant contre le gaspillage
           alimentaire
         </p>
       </div>
@@ -59,11 +59,21 @@ const LandingPatenary = (): JSX.Element => {
           variants={variants.varient2}
           initial="hidden"
           animate={controls}
-          className="partners-content grid grid-cols-2 md:grid-cols-2 mt-14 w-max flex justify-center gap-14"
+          className="partners-content grid grid-cols-2 md:grid-cols-3 mt-14 w-max flex justify-center gap-14"
         >
           {partnerList.map((item, index) => (
-            <div className="logo-container flex items-center cursor-pointer" key={index}>
-              <img src={`/icons/${item.img}`} className="w-20 md:w-24 object-contain" onClick={() => router.push(item.link)} />
+            <div
+              className={`logo-container flex items-center w-full cursor-pointer ${item.colspan ? `col-span-${item.colspan}` : ''} ${index === partnerList.length - 1 && partnerList.length % 2 !== 0
+                ? 'col-span-2 md:col-span-0 justify-center'
+                : ''} md:col-span-1`}
+              key={index}
+            >
+
+              <img
+                src={`/icons/${item.img}`}
+                className="w-20 md:w-24 object-contain"
+                onClick={() => router.push(item.link)}
+              />
             </div>
           ))}
         </motion.div>

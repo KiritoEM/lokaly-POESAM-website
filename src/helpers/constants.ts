@@ -21,7 +21,15 @@ const navList: InavList[] = [
 
 const partnerList: Ipartners[] = [
   { img: "partner1.png", link: "https://www.facebook.com/recyclanay" },
-  { img: "partner2.png", link: "https://www.facebook.com/profile.php?id=100071985974415" },
+  {
+    img: "partner2.png",
+    link: "https://www.facebook.com/profile.php?id=100071985974415",
+  },
+  {
+    img: "partner3.png",
+    link: "https://www.facebook.com/NectartServiceTraiteur",
+    colspan: 3,
+  },
 ];
 
 const FAQData: IFAQCard[] = [
