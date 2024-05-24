@@ -28,7 +28,7 @@ const FAQCard = ({ text, title, isActive, handleToggle }: IFAQCard): JSX.Element
             />
             <img
                 src="/icons/chevron-circle-right.svg"
-                className={`w-12 md:w-auto cursor-pointer absolute right-0 mr-12 md:relative md:hidden ${isActive && "md:hidden"}  ${isActive && "rotate-respons"}`}
+                className={`w-12 md:w-auto cursor-pointer absolute right-0 mr-8 md:relative md:hidden ${isActive && "md:hidden"}  ${isActive && "rotate-respons"}`}
             />
         </article>
     );

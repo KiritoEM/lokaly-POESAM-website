@@ -39,7 +39,7 @@ const LandingPatenary = (): JSX.Element => {
 
   return (
     <section
-      className="landing__partners pt-24 lg:pt-30 px-10 md:px-16 lg:px-40 bg-white"
+      className="landing__partners pt-24 lg:pt-30 px-8 md:px-16 lg:px-40 bg-white"
       ref={ref}
       id="partners"
     >
@@ -59,7 +59,7 @@ const LandingPatenary = (): JSX.Element => {
           variants={variants.varient2}
           initial="hidden"
           animate={controls}
-          className="partners-content grid grid-cols-2 md:grid-cols-3 mt-14 w-max flex justify-center gap-20"
+          className="partners-content grid grid-cols-2 md:grid-cols-3 mt-14 w-max flex justify-center gap-12 md:gap-20"
         >
           {partnerList.map((item, index) => (
             <div

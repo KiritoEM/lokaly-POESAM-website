@@ -23,7 +23,7 @@ const LandingContact = (): JSX.Element => {
             visible: {
                 opacity: 1,
                 x: 0,
-                transition: { delay: 0.4, duration: 0.7, type: "spring" },
+                transition: { delay: 0.3, duration: 0.6, type: "spring" },
             },
         },
         varient2: {
@@ -38,7 +38,7 @@ const LandingContact = (): JSX.Element => {
 
     return (
         <section className="landing__contact bg-[url('/contact-bg.svg')] bg-cover bg-no-repeat bg-center w-full overflow-hidden" id="contact" ref={ref}>
-            <section className={`container mx-auto  pb-24 px-10 md:pl-12 md:pr-10 lg:pl-36 lg:pr-40 mt-24`}>
+            <section className={`container mx-auto  pb-24 px-8 md:pl-12 md:pr-10 lg:pl-36 lg:pr-40 mt-24`}>
                 <div className="flex flex-col md:flex-row  items-end gap-12 md:gap-10 relative z-30">
                     <motion.div
                         variants={variants.varient1}
@@ -56,7 +56,7 @@ const LandingContact = (): JSX.Element => {
                         <div className="cat relative z-40 top-8 flex justify-end">
                             <img src="/cat.svg" alt="" />
                         </div>
-                        <div className="contact-form h-max bg-white rounded-xl p-9 flex flex-col gap-6">
+                        <div className="contact-form h-max bg-white rounded-xl p-7 md:p-9 flex flex-col gap-6">
                             <InputComponent01 type="text" placeholder="Votre nom" name="name" />
                             <InputComponent01 type="email" placeholder="Adresse mail" name="email" />
                             <InputComponent01 type="number" placeholder="Numéro de téléphone" name="phoneNumber" />
@@ -65,13 +65,17 @@ const LandingContact = (): JSX.Element => {
                             <button type="submit" className="text-sm bg-green01 w-max px-12 py-3 rounded-xl text-white mt-6">Envoyer</button>
                         </div>
                     </form>) :
-                        (<div className="contact-form w-full md:w-1/2 lg:w-3/5 h-max bg-white rounded-xl p-9 flex flex-col gap-3">
-                            <h3 className="text-2xl general-sans-semibold text-blue01">Message bien envoyé!</h3>
-                            <p className="text-blue02">Notre équipe a bien reçu votre message, nous vous contacterons dans les moindres délai.</p>
-                            <div className="w-full flex justify-end">
-                                <button type="submit" className="text-sm bg-green01 w-max px-5 py-3 rounded-xl text-white mt-6" onClick={() => emailState(false)}>Envoyer un autre</button>
+                        (<div className="w-full md:w-1/2 lg:w-3/5">
+                            <div className="cat relative z-40 top-8 flex justify-end">
+                                <img src="/cat.svg" alt="" />
                             </div>
-                        </div>)}
+                            <div className="contact-form  h-max bg-white rounded-xl p-9 flex flex-col gap-3">
+                                <h3 className="text-xl md:text-2xl general-sans-semibold text-blue01">Message bien envoyé!</h3>
+                                <p className="text-blue02">Notre équipe a bien reçu votre message, nous vous contacterons dans les moindres délai.</p>
+                                <div className="w-full flex md:justify-end">
+                                    <button type="submit" className="text-sm bg-green01 w-max px-5 py-3 rounded-xl text-white mt-6" onClick={() => emailState(false)}>Envoyer un autre</button>
+                                </div>
+                            </div></div>)}
                 </div>
             </section >
         </section >

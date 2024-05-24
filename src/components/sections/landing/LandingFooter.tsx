@@ -29,7 +29,7 @@ const LandingFooter = (): JSX.Element => {
             animate={controls} className="container mx-auto w-full" ref={ref}>
             <footer
 
-                className="landing__footer flex flex-col md:flex-row md:justify-between items-center pt-10 md:pt-5 pb-10 md:pb-16 px-10 md:px-16 lg:px-44 bg-white gap-6">
+                className="landing__footer flex flex-col md:flex-row md:justify-between items-center pt-10 md:pt-5 pb-10 md:pb-16 px-8 md:px-16 lg:px-44 bg-white gap-6">
                 <div className="logo">
                     <img src="/logo.svg" alt="" />
                 </div>

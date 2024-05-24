@@ -32,7 +32,7 @@ const LandingFeatures = (): JSX.Element => {
       visible: {
         opacity: 1,
         y: 0,
-        transition: { delay: 0.4, duration: 0.8, type: "spring" },
+        transition: { delay: 0.4, duration: 0.7, type: "spring" },
       },
     },
   };
@@ -40,12 +40,12 @@ const LandingFeatures = (): JSX.Element => {
   return (
     <div className="container mx-auto">
       <section
-        className="landing__features pt-24 lg:pt-30 px-10  md:px-16 lg:px-20 bg-white"
+        className="landing__features pt-24 lg:pt-30 px-8 md:px-16 lg:px-20 bg-white"
         ref={ref}
         id="features"
       >
         <div className="features-header flex flex-col items-center gap-2">
-          <h4 className="text-4xl lg:text-5xl text-green01 calSans text-center">
+          <h4 className="text-3xl lg:text-5xl text-green01 calSans text-center">
             Connecter, Promouvoir, Agir
           </h4>
           <p className="text-white01 w-full lg:w-96 text-center lg:text-lg">
@@ -106,7 +106,7 @@ const LandingFeatures = (): JSX.Element => {
           >
             <div className="features-card  md:w-1/2 lg:w-2/4 bg-green03 rounded-lg  flex flex-col items-center p-8 gap-10 overflow-hidden  cursor-pointer">
               <div className="header flex flex-col items-center gap-2">
-                <h3 className="calSans text-gray02 text-3xl text-center">
+                <h3 className="calSans text-gray02 text-2xl lg:text-3xl text-center">
                   Facile à installer
                 </h3>
                 <p className="text-gray02 text-center">
@@ -124,7 +124,7 @@ const LandingFeatures = (): JSX.Element => {
               onMouseLeave={() => setHover(false)}
             >
               <div className="header flex flex-col items-center gap-2">
-                <h3 className="calSans text-3xl  text-center">
+                <h3 className="calSans text-2xl lg:text-3xl  text-center">
                   Acces direct
                 </h3>
                 <p className="text-center">
