@@ -36,7 +36,7 @@ const LandingFAQ = (): JSX.Element => {
                 <img src="/cloud2.svg" className="w-48 md:w-80" />
             </div>
             <section className="landing__FAQ  lg:pt-30 pb-4 px-7 md:px-16 lg:px-56 bg-white" id="FAQ">
-                <div className="FAQ-header flex flex-col items-center gap-2 mt-10 md:mt-20">
+                <div className="FAQ-header flex flex-col items-center gap-2 mt-10 md:mt-13">
                     <h4 className="text-3xl md:text-4xl text-green01 calSans text-center">
                         Foire aux questions
                     </h4>
