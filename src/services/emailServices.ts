@@ -1,12 +1,9 @@
+import { userServiceContext } from "@/hooks/serviceContext";
 import axios from "axios";
 import { useState } from "react";
 
 export default function emailServices() {
-  const [loading, setLoading] = useState(false);
-
-  const startLoading = ()=> {
-    setLoading(true);
-  }
+  const { emailState } = userServiceContext();
 
   const sendEmail = async (e: any) => {
     e.preventDefault();
@@ -31,7 +28,9 @@ export default function emailServices() {
           "Content-Type": "application/json",
         },
       });
-      console.log(res.data.message);
+      if (res.status === 200) {
+        emailState(true);
+      }
     } catch (err) {
       console.error(err);
     }
@@ -51,9 +50,7 @@ export default function emailServices() {
       console.log(res.data.message);
     } catch (err) {
       console.error(err);
-    }
-    finally{
-
+    } finally {
     }
   };
 

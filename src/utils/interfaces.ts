@@ -28,7 +28,7 @@ interface IServiceContext {
   loading: boolean;
   emailSent: boolean;
   loadingState: (state: boolean) => void;
-  sendEmail: () => void;
+  emailState: (tate: boolean) => void;
 }
 
 interface IDefaultNavContext {

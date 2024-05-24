@@ -6,7 +6,7 @@ import React, { createContext, useContext, useState } from "react";
 
 const ServiceContext = createContext<IServiceContext | null>(null);
 
-export const LoadingProvider: React.FC<IServiceProvider> = ({
+export const ServiceProvider: React.FC<IServiceProvider> = ({
     children,
 }): JSX.Element => {
     const [loading, setLoading] = useState<boolean>(false);
@@ -16,8 +16,8 @@ export const LoadingProvider: React.FC<IServiceProvider> = ({
         setLoading(state);
     };
 
-    const sendEmail = () => {
-        setEmailState(true);
+    const emailState = (state: boolean) => {
+        setEmailState(state);
     };
 
     return (
@@ -26,7 +26,7 @@ export const LoadingProvider: React.FC<IServiceProvider> = ({
                 loading,
                 emailSent,
                 loadingState,
-                sendEmail
+                emailState
             }}
         >
             {children}
