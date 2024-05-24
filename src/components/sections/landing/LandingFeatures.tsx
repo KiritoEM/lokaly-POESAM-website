@@ -2,19 +2,18 @@ import { useEffect, useState } from "react";
 import { delay, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import FirebaseEmailServices from "@/services/firebase/FirebaseEmailServices";
+import emailServices from "@/services/emailServices";
 
 const LandingFeatures = (): JSX.Element => {
   const controls = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.3 });
   const { addEmail } = FirebaseEmailServices();
+  const { verifyEmail } = emailServices();
   const [email, setEmail] = useState<string>("");
+  const [hover, setHover] = useState(false);
 
-  if (email) {
-    console.log(email)
-  }
-
-  if (inView) {
-    console.log(inView);
+  if (hover) {
+    console.log(hover)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,7 +32,7 @@ const LandingFeatures = (): JSX.Element => {
       visible: {
         opacity: 1,
         y: 0,
-        transition: { delay: 0.4, duration: 0.8, type: "spring" },
+        transition: { delay: 0.4, duration: 0.7, type: "spring" },
       },
     },
   };
@@ -41,12 +40,12 @@ const LandingFeatures = (): JSX.Element => {
   return (
     <div className="container mx-auto">
       <section
-        className="landing__features pt-24 lg:pt-30 px-10  md:px-16 lg:px-20 bg-white"
+        className="landing__features pt-24 lg:pt-30 px-8 md:px-16 lg:px-20 bg-white"
         ref={ref}
         id="features"
       >
         <div className="features-header flex flex-col items-center gap-2">
-          <h4 className="text-4xl lg:text-5xl text-green01 calSans text-center">
+          <h4 className="text-3xl lg:text-5xl text-green01 calSans text-center">
             Connecter, Promouvoir, Agir
           </h4>
           <p className="text-white01 w-full lg:w-96 text-center lg:text-lg">
@@ -93,7 +92,7 @@ const LandingFeatures = (): JSX.Element => {
                 id="basic-addon1"
                 data-twe-input-group-text-ref
               >
-                <button onClick={() => { addEmail(email); console.log("clické") }}>
+                <button onClick={() => { verifyEmail(email); console.log("clické") }}>
                   <img src="/icons/send-icon.svg" className="w-20" />
                 </button>
               </span>
@@ -107,33 +106,38 @@ const LandingFeatures = (): JSX.Element => {
           >
             <div className="features-card  md:w-1/2 lg:w-2/4 bg-green03 rounded-lg  flex flex-col items-center p-8 gap-10 overflow-hidden  cursor-pointer">
               <div className="header flex flex-col items-center gap-2">
-                <h3 className="calSans text-gray02 text-3xl text-center">
+                <h3 className="calSans text-gray02 text-2xl lg:text-3xl text-center">
                   Facile à installer
                 </h3>
                 <p className="text-gray02 text-center">
                   Téléchargez, installez l’application et ....c’est prêt
                 </p>
               </div>
-              <img src="/home-img.svg" alt="" />
+              <img src="/mockup1.svg" className="width-full" />
             </div>
             <motion.div
               variants={variants.varient2}
               initial="hidden"
               animate={controls}
-              className="features-card  md:w-1/2 lg:w-2/4 bg-green03 lg:bg-green04 hover:bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden cursor-pointer"
+              className="features-card  md:w-1/2 lg:w-2/4 bg-green03 lg:bg-opacity-40 hover:bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden  text-gray02 lg:text-opacity-40 hover:text-opacity-100 cursor-pointer"
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
             >
               <div className="header flex flex-col items-center gap-2">
-                <h3 className="calSans text-gray02 text-3xl lg:opacity-40 hover:opacity-100  text-center">
+                <h3 className="calSans text-2xl lg:text-3xl  text-center">
                   Acces direct
                 </h3>
-                <p className="text-gray02 text-center lg:opacity-40 hover:opacity-100">
+                <p className="text-center">
                   Accédez et Explorez nos superbes offres avec ou sans compte
                 </p>
               </div>
-              <img
-                src="/home-img.svg"
-                className="lg:opacity-40	hover:opacity-100"
-              />
+              {hover ? <img
+                src="/mockup2.png"
+                className="lg:opacity-100"
+              /> : <img
+                src="/mockup2.png"
+                className="lg:opacity-40"
+              />}
             </motion.div>
           </motion.div>
         </div>

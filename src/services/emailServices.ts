@@ -1,6 +1,10 @@
+import { userServiceContext } from "@/hooks/serviceContext";
 import axios from "axios";
+import { useState } from "react";
 
 export default function emailServices() {
+  const { emailState, loadingState } = userServiceContext();
+
   const sendEmail = async (e: any) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -24,12 +28,32 @@ export default function emailServices() {
           "Content-Type": "application/json",
         },
       });
-      alert(res.data.message);
-      console.log(res.data.message);
+      if (res.status === 200) {
+        loadingState(false);
+        emailState(true);
+      }
     } catch (err) {
       console.error(err);
     }
   };
 
-  return { sendEmail };
+  const verifyEmail = async (email: string) => {
+    try {
+      const res = await axios.post(
+        "/api/emailVerification",
+        { email: email },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      console.log(res.data.message);
+    } catch (err) {
+      console.error(err);
+    } finally {
+    }
+  };
+
+  return { sendEmail, verifyEmail };
 }

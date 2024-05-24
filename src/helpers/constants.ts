@@ -1,4 +1,4 @@
-import { IFAQCard, InavList } from "@/utils/interfaces";
+import { IFAQCard, InavList, Ipartners } from "@/utils/interfaces";
 
 const navList: InavList[] = [
   {
@@ -19,7 +19,18 @@ const navList: InavList[] = [
   },
 ];
 
-const partnerList: string[] = ["partner1.png", "partner2.png"];
+const partnerList: Ipartners[] = [
+  { img: "partner1.png", link: "https://www.facebook.com/recyclanay" },
+  {
+    img: "partner2.png",
+    link: "https://www.facebook.com/profile.php?id=100071985974415",
+  },
+  {
+    img: "partner3.png",
+    link: "https://www.facebook.com/NectartServiceTraiteur",
+    colspan: 3,
+  },
+];
 
 const FAQData: IFAQCard[] = [
   {

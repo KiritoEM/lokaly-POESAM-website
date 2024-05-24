@@ -19,7 +19,7 @@ const FAQCard = ({ text, title, isActive, handleToggle }: IFAQCard): JSX.Element
             onClick={() => { handleToggle && handleToggle(); handleImageClick() }}
         >
             <div className={`header w-11/12	md:w-full ${isActive && "flex flex-col gap-5"}`}>
-                <h3 className="text-xl md:text-2xl text-blue01 calSans">{title}</h3>
+                <h3 className="text-lg md:text-2xl text-blue01 calSans">{title}</h3>
                 <p className={`text-blue02  ${isActive ? "flex" : "hidden"}`}>{text}</p>
             </div>
             <img
@@ -28,7 +28,7 @@ const FAQCard = ({ text, title, isActive, handleToggle }: IFAQCard): JSX.Element
             />
             <img
                 src="/icons/chevron-circle-right.svg"
-                className={`w-12 md:w-auto cursor-pointer absolute right-0 mr-12 md:relative md:hidden ${isActive && "md:hidden"}  ${isActive && "rotate-respons"}`}
+                className={`w-12 md:w-auto cursor-pointer absolute right-0 mr-8 md:relative md:hidden ${isActive && "md:hidden"}  ${isActive && "rotate-respons"}`}
             />
         </article>
     );
