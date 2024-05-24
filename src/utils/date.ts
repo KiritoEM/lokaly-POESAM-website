@@ -1,6 +1,4 @@
-const formatDate = (): string => {
-  const actualDate = new Date();
-
+const formatDate = (actualDate: any): string => {
   const month = [
     "janvier",
     "février",
@@ -23,3 +21,5 @@ const formatDate = (): string => {
   const dateFormatee = `${jour} ${mois} ${annee}`;
   return dateFormatee;
 };
+
+export { formatDate };
