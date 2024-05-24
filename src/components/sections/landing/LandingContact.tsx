@@ -23,7 +23,7 @@ const LandingContact = (): JSX.Element => {
             visible: {
                 opacity: 1,
                 x: 0,
-                transition: { delay: 0.3, duration: 0.6, type: "spring" },
+                transition: { delay: 0.4, duration: 0.7, type: "spring" },
             },
         },
         varient2: {
