@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import FAQCard from "@/components/cards/FAQCard";
 import { FAQData } from "@/helpers/constants";
 import { motion, useAnimation } from "framer-motion";
@@ -30,9 +30,13 @@ const LandingFAQ = (): JSX.Element => {
     };
 
     return (
-        <div className="container mx-auto overflow-hidden" ref={ref}>
-            <section className="landing__FAQ pt-24 lg:pt-30 pb-4 px-7 md:px-16 lg:px-56 bg-white" id="FAQ">
-                <div className="FAQ-header flex flex-col items-center gap-2">
+        <div className="container mx-auto overflow-hidden pt-24" ref={ref}>
+            <div className="illustration flex  justify-end md:justify-between">
+                <img src="/cloud1.svg" className="relative top-48 hidden md:flex" />
+                <img src="/cloud2.svg" className="w-48 md:w-80" />
+            </div>
+            <section className="landing__FAQ  lg:pt-30 pb-4 px-7 md:px-16 lg:px-56 bg-white" id="FAQ">
+                <div className="FAQ-header flex flex-col items-center gap-2 mt-10 md:mt-20">
                     <h4 className="text-3xl md:text-4xl text-green01 calSans text-center">
                         Foire aux questions
                     </h4>
