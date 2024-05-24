@@ -68,17 +68,17 @@ const LandingPatenary = (): JSX.Element => {
                 : ''} md:col-span-1`}
               key={index}
             >
-
-              <img
-                src={`/icons/${item.img}`}
-                className="w-20 md:w-24 object-contain"
-                onClick={() => router.push(item.link)}
-              />
+              <a href={item.link} target="_blank">
+                <img
+                  src={`/icons/${item.img}`}
+                  className="w-20 md:w-24 object-contain"
+                />
+              </a>
             </div>
           ))}
         </motion.div>
       </div>
-    </section>
+    </section >
   );
 };
 
