@@ -10,13 +10,10 @@ const LandingFeatures = (): JSX.Element => {
   const { addEmail } = FirebaseEmailServices();
   const { verifyEmail } = emailServices();
   const [email, setEmail] = useState<string>("");
+  const [hover, setHover] = useState(false);
 
-  if (email) {
-    console.log(email)
-  }
-
-  if (inView) {
-    console.log(inView);
+  if (hover) {
+    console.log(hover)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -122,7 +119,9 @@ const LandingFeatures = (): JSX.Element => {
               variants={variants.varient2}
               initial="hidden"
               animate={controls}
-              className="features-card  md:w-1/2 lg:w-2/4 bg-green03 lg:bg-green04 hover:bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden  text-gray02 lg:text-opacity-40 hover:text-opacity-100 cursor-pointer"
+              className="features-card  md:w-1/2 lg:w-2/4 bg-green03 lg:bg-opacity-40 hover:bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden  text-gray02 lg:text-opacity-40 hover:text-opacity-100 cursor-pointer"
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
             >
               <div className="header flex flex-col items-center gap-2">
                 <h3 className="calSans text-3xl  text-center">
@@ -132,10 +131,13 @@ const LandingFeatures = (): JSX.Element => {
                   Accédez et Explorez nos superbes offres avec ou sans compte
                 </p>
               </div>
-              <img
-                src="/home-img.svg"
-                className="lg:opacity-40	hover:opacity-100"
-              />
+              {hover ? <img
+                src="/mockup2.png"
+                className="lg:opacity-100"
+              /> : <img
+                src="/mockup2.png"
+                className="lg:opacity-40"
+              />}
             </motion.div>
           </motion.div>
         </div>

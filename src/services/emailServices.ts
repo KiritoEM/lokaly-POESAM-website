@@ -1,6 +1,13 @@
 import axios from "axios";
+import { useState } from "react";
 
 export default function emailServices() {
+  const [loading, setLoading] = useState(false);
+
+  const startLoading = ()=> {
+    setLoading(true);
+  }
+
   const sendEmail = async (e: any) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -24,7 +31,6 @@ export default function emailServices() {
           "Content-Type": "application/json",
         },
       });
-      alert(res.data.message);
       console.log(res.data.message);
     } catch (err) {
       console.error(err);
@@ -45,6 +51,9 @@ export default function emailServices() {
       console.log(res.data.message);
     } catch (err) {
       console.error(err);
+    }
+    finally{
+
     }
   };
 

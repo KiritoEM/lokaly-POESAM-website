@@ -1,4 +1,5 @@
 import Brand from "@/components/Brand";
+import Loading from "@/components/Loading";
 import LandingContact from "@/components/sections/landing/LandingContact";
 import LandingFAQ from "@/components/sections/landing/LandingFAQ";
 import LandingFeatures from "@/components/sections/landing/LandingFeatures";
@@ -27,6 +28,7 @@ const Landing = (): JSX.Element => {
         <LandingContact />
         <LandingFooter />
       </LandingLayout>
+      {/* <Loading /> */}
     </section>
   );
 };
