@@ -32,7 +32,9 @@ const LandingFeatures = (): JSX.Element => {
         }
       }
       else {
-        loadingState(false)
+        setTimeout(() => {
+          loadingState(false);
+        }, 600);
       }
     } catch (error) {
       console.error("An error occurred during email processing:", error);

@@ -4,7 +4,7 @@ const isValidEmail = (email: string) => {
 };
 
 const isValidPhoneNumber = (phoneNumber: any) => {
-  const phoneRegex = /^0(32|33|34|38)\d{7}$/;
+  const phoneRegex = /^0(32|33|34|37|38)\d{7}$/;
   return phoneRegex.test(phoneNumber);
 };
 

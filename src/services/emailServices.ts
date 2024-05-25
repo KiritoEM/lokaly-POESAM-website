@@ -45,7 +45,9 @@ export default function emailServices() {
         console.error(err);
       }
     } else {
-      loadingState(false);
+      setTimeout(() => {
+        loadingState(false);
+      }, 600);
     }
   };
 
