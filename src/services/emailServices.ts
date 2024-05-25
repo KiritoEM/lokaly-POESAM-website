@@ -50,7 +50,6 @@ export default function emailServices() {
       );
       if (res.status === 200) {
         loadingState(false);
-        emailState(true);
         return true;
       }
     } catch (err) {
