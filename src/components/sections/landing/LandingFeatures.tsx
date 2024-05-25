@@ -28,6 +28,7 @@ const LandingFeatures = (): JSX.Element => {
         const isVerified = await verifyEmail(email);
         if (isVerified) {
           await addEmail(email);
+          setEmail("")
         }
       }
     } catch (error) {
@@ -102,6 +103,7 @@ const LandingFeatures = (): JSX.Element => {
                 id="exampleFormControlInput"
                 placeholder="votre adresse email"
                 onChange={handleChange}
+                value={email}
               />
               <span
                 className="flex items-center whitespace-nowrap"

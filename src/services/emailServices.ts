@@ -36,6 +36,10 @@ export default function emailServices() {
         if (res.status === 200) {
           loadingState(false);
           emailState(true);
+          form["name"].value = "";
+          form["email"].value = "";
+          form["message"].value = "";
+          form["phoneNumber"].value = "";
         }
       } catch (err) {
         console.error(err);
