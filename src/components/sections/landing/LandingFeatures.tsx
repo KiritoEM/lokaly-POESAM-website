@@ -31,6 +31,9 @@ const LandingFeatures = (): JSX.Element => {
           setEmail("")
         }
       }
+      else {
+        loadingState(false)
+      }
     } catch (error) {
       console.error("An error occurred during email processing:", error);
       alert("An error occurred. Please try again.");
