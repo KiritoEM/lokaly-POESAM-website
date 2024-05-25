@@ -17,7 +17,7 @@ const Brand = (): JSX.Element => {
             prevCount < overviewData[index] ? prevCount + 1 : prevCount
           )
         );
-      }, 60);
+      }, 65);
 
       return () => clearInterval(interval);
     }
