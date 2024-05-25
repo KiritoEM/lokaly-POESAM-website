@@ -24,7 +24,6 @@ const LandingFeatures = (): JSX.Element => {
       const isVerified = await verifyEmail(email);
       if (isVerified) {
         await addEmail(email);
-        alert("Email ajouté avec succés!");
       }
     } catch (error) {
       console.error("An error occurred during email processing:", error);
