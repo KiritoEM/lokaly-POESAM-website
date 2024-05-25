@@ -142,8 +142,8 @@ const LandingFeatures = (): JSX.Element => {
               variants={variants.varient2}
               initial="hidden"
               animate={controls}
-              className={`features-card md:w-1/2 lg:w-2/4 bg-green03 lg:bg-opacity-40 ${hover ? "bg-opacity-100" : "bg-opacity-40"
-                } hover:bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden text-gray02 ${hover ? "text-opacity-100" : "text-opacity-40"
+              className={`features-card md:w-1/2 lg:w-2/4 bg-green03 ${hover ? "lg:bg-opacity-100" : "lg:bg-opacity-40"
+                } hover:bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden text-gray02 ${hover ? "lg:text-opacity-100" : "lg:text-opacity-40"
                 } hover:text-opacity-100 cursor-pointer`}
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
@@ -158,7 +158,7 @@ const LandingFeatures = (): JSX.Element => {
               </div>
               <img
                 src="/mockup2.png"
-                className={hover ? "opacity-100" : "opacity-40"}
+                className={hover ? "lg:opacity-100" : "lg:opacity-40"}
               />
             </motion.div>
           </motion.div>
