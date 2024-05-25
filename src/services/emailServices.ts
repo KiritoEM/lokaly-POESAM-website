@@ -1,5 +1,4 @@
 import { userServiceContext } from "@/hooks/serviceContext";
-import { isValidEmail, isValidPhoneNumber } from "@/utils/regex";
 import axios from "axios";
 import { useState } from "react";
 
@@ -8,42 +7,36 @@ export default function emailServices() {
 
   const sendEmail = async (e: any) => {
     e.preventDefault();
+    loadingState(true);
+    
     const form = e.currentTarget;
     const userName = form["name"].value;
     const userEmail = form["email"].value;
     const userMessage = form["message"].value;
     const phoneNumber = form["phoneNumber"].value;
 
-    const verifiedEmail = isValidEmail(userEmail);
-    const verifiedPhoneNumber = isValidPhoneNumber(`${phoneNumber}`);
+    const emailData = {
+      userName: userName,
+      userEmail: userEmail,
+      message: userMessage,
+      phoneNumber: phoneNumber,
+    };
 
-    if (verifiedEmail && verifiedPhoneNumber) {
-      const emailData = {
-        userName: userName,
-        userEmail: userEmail,
-        message: userMessage,
-        phoneNumber: phoneNumber,
-      };
+    console.log(emailData);
 
-      console.log(emailData);
-
-      try {
-        const res = await axios.post("/api/emailContact", emailData, {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        if (res.status === 200) {
-          loadingState(false);
-          emailState(true);
-          form["name"].value = "";
-          form["email"].value = "";
-          form["message"].value = "";
-          form["phoneNumber"].value = "";
-        }
-      } catch (err) {
-        console.error(err);
+    try {
+      const res = await axios.post("/api/emailContact", emailData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      console.log(res);
+      if (res.status === 200) {
+        loadingState(false);
+        emailState(true);
       }
+    } catch (err) {
+      console.error(err);
     }
   };
 
