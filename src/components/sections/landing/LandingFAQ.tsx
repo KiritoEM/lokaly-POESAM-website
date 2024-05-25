@@ -26,7 +26,7 @@ const LandingFAQ = (): JSX.Element => {
             visible: (index: number) => ({
                 opacity: 1,
                 y: 0,
-                transition: { delay: (index + 1) * 0.3, duration: 0.5, type: "spring" },
+                transition: { delay: (index + 1) * 0.35, duration: 0.5, type: "spring" },
             }),
         },
         varient2: {

@@ -50,7 +50,7 @@ const LandingPatenary = (): JSX.Element => {
         <p className="text-white01  text-center  lg:text-lg">
           Grâce à des partenariats solides, nous sommes en mesure de vous offrir
           une sélection diversifiée de produits locaux de qualité, tout en
-          soutenant les producteurs locaux et en -luttant contre le gaspillage
+          soutenant les producteurs locaux et en luttant contre le gaspillage
           alimentaire
         </p>
       </div>

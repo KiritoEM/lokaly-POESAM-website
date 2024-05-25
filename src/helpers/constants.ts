@@ -42,7 +42,7 @@ const FAQData: IFAQCard[] = [
     text: "Pour rejoindre Lokaly en tant que vendeur, vous devez nous contacter pour obtenir un compte vendeur. Envoyez-nous un message via notre formulaire de contact ou par email, et nous vous guiderons dans le processus de création de votre compte.",
   },
   {
-    title: "Quels types de produits puis-je trouver sur Lokaly ?",
+    title: "Quels types de produits pourrais-je trouver sur Lokaly ?",
     text: "Sur Lokaly, vous pouvez trouver une variété de produits locaux, notamment des produits agricoles frais tels que des fruits et légumes, des produits issus des food businesses pour le programme NoWaste, et des alternatives durables comme les charbons éco et le biogaz.",
   },
   {

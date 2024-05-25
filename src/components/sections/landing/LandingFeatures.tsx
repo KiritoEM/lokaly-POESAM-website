@@ -8,7 +8,7 @@ import { isValidEmail } from "@/utils/regex";
 
 const LandingFeatures = (): JSX.Element => {
   const controls = useAnimation();
-  const { loadingState } = userServiceContext()
+  const { loadingState } = userServiceContext();
   const { ref, inView } = useInView({ threshold: 0.3 });
   const { verifyEmail } = emailServices();
   const { addEmail } = FirebaseEmailServices();
@@ -28,10 +28,9 @@ const LandingFeatures = (): JSX.Element => {
         const isVerified = await verifyEmail(email);
         if (isVerified) {
           await addEmail(email);
-          setEmail("")
+          setEmail("");
         }
-      }
-      else {
+      } else {
         setTimeout(() => {
           loadingState(false);
         }, 600);
@@ -91,7 +90,7 @@ const LandingFeatures = (): JSX.Element => {
               </p>
             </div>
             <div
-              className="relative mb-4 flex items-stretch bg-white02 rounded-3xl py-2 pr-2 pl-7"
+              className="relative mb-4 flex items-stretch bg-white02  py-2 pr-2 pl-7 email-input "
               data-twe-input-wrapper-init
               data-twe-input-group-ref
             >
@@ -104,7 +103,7 @@ const LandingFeatures = (): JSX.Element => {
               </span>
               <input
                 type="email"
-                className="min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-gray03 data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-gray03 dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-gray03 [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-1 text-gray03"
+                className="min-h-[auto] w-full border-0 bg-transparent px-3 py-[0.32rem] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-gray03 data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-gray03 dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-gray03 [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-1 text-gray03"
                 id="exampleFormControlInput"
                 placeholder="votre adresse email"
                 onChange={handleChange}
@@ -143,13 +142,15 @@ const LandingFeatures = (): JSX.Element => {
               variants={variants.varient2}
               initial="hidden"
               animate={controls}
-              className="features-card md:w-1/2 lg:w-2/4 bg-green03 lg:bg-opacity-40 hover:bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden text-gray02 lg:text-opacity-40 hover:text-opacity-100 cursor-pointer"
+              className={`features-card md:w-1/2 lg:w-2/4 bg-green03 lg:bg-opacity-40 ${hover ? "bg-opacity-100" : "bg-opacity-40"
+                } hover:bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden text-gray02 ${hover ? "text-opacity-100" : "text-opacity-40"
+                } hover:text-opacity-100 cursor-pointer`}
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
             >
               <div className="header flex flex-col items-center gap-2">
                 <h3 className="calSans text-2xl lg:text-3xl text-center">
-                  Acces direct
+                  Accès direct
                 </h3>
                 <p className="text-center">
                   Accédez et Explorez nos superbes offres avec ou sans compte
@@ -157,7 +158,7 @@ const LandingFeatures = (): JSX.Element => {
               </div>
               <img
                 src="/mockup2.png"
-                className={`lg:opacity-${hover ? "100" : "40"}`}
+                className={hover ? "opacity-100" : "opacity-40"}
               />
             </motion.div>
           </motion.div>

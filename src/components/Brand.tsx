@@ -46,11 +46,11 @@ const Brand = (): JSX.Element => {
         </div>
         <div className="job flex gap-5 md:gap-4 items-center">
           <h4 className="text-5xl lg:text-6xl text-white calSans pt-2">
-            +{counts[1]}
+            {counts[1]}
           </h4>
           <p className="text-white01">
             Emplois <br />
-            crées
+            créés
           </p>
         </div>
         <div className="food flex gap-5 md:gap-4 items-center">
@@ -59,7 +59,7 @@ const Brand = (): JSX.Element => {
           </h4>
           <p className="text-white01">
             Kilos de <br />
-            nourriture sauvé
+            nourriture sauvés
           </p>
         </div>
         <div className="selling flex gap-5 md:gap-4 items-center">
@@ -69,7 +69,7 @@ const Brand = (): JSX.Element => {
           <p className="text-white01">
             ventes
             <br />
-            réalisés
+            réalisées
           </p>
         </div>
       </div>
