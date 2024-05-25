@@ -92,7 +92,7 @@ const LandingFeatures = (): JSX.Element => {
                 <img src="/icons/email-icon.svg" className="w-9" />
               </span>
               <input
-                type="text"
+                type="email"
                 className="min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-gray03 data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-gray03 dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-gray03 [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-1 text-gray03"
                 id="exampleFormControlInput"
                 placeholder="votre adresse email"
