@@ -1,24 +1,36 @@
 import { useEffect, useState } from "react";
-import { delay, motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import FirebaseEmailServices from "@/services/firebase/FirebaseEmailServices";
 import emailServices from "@/services/emailServices";
+import { userServiceContext } from "@/hooks/serviceContext";
 
 const LandingFeatures = (): JSX.Element => {
   const controls = useAnimation();
+  const { loadingState } = userServiceContext()
   const { ref, inView } = useInView({ threshold: 0.3 });
-  const { addEmail } = FirebaseEmailServices();
   const { verifyEmail } = emailServices();
+  const { addEmail } = FirebaseEmailServices();
   const [email, setEmail] = useState<string>("");
   const [hover, setHover] = useState(false);
 
-  if (hover) {
-    console.log(hover)
-  }
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value)
-  }
+    setEmail(e.target.value);
+  };
+
+  const handleEmailSubmit = async () => {
+    try {
+      loadingState(true);
+      const isVerified = await verifyEmail(email);
+      if (isVerified) {
+        await addEmail(email);
+        alert("Email ajouté avec succés!");
+      }
+    } catch (error) {
+      console.error("An error occurred during email processing:", error);
+      alert("An error occurred. Please try again.");
+    }
+  };
 
   useEffect(() => {
     if (inView) {
@@ -52,7 +64,7 @@ const LandingFeatures = (): JSX.Element => {
             pour une Alimentation Locale et Durable à Madagascar
           </p>
         </div>
-        <div className="features-content flex flex-col lg:flex-row  gap-12 md:gap-20 mt-14">
+        <div className="features-content flex flex-col lg:flex-row gap-12 md:gap-20 mt-14">
           <motion.div
             variants={variants.varient2}
             initial="hidden"
@@ -82,7 +94,7 @@ const LandingFeatures = (): JSX.Element => {
               </span>
               <input
                 type="text"
-                className="min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem]  outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-gray03 data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-gray03 dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-gray03 [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-1 text-gray03"
+                className="min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-gray03 data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-gray03 dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-gray03 [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-1 text-gray03"
                 id="exampleFormControlInput"
                 placeholder="votre adresse email"
                 onChange={handleChange}
@@ -92,7 +104,7 @@ const LandingFeatures = (): JSX.Element => {
                 id="basic-addon1"
                 data-twe-input-group-text-ref
               >
-                <button onClick={() => { verifyEmail(email); console.log("clické") }}>
+                <button onClick={handleEmailSubmit}>
                   <img src="/icons/send-icon.svg" className="w-20" />
                 </button>
               </span>
@@ -104,7 +116,7 @@ const LandingFeatures = (): JSX.Element => {
             animate={controls}
             className="features flex flex-col md:flex-row gap-7 lg:w-2/3 overflow-hidden"
           >
-            <div className="features-card  md:w-1/2 lg:w-2/4 bg-green03 rounded-lg  flex flex-col items-center p-8 gap-10 overflow-hidden  cursor-pointer">
+            <div className="features-card md:w-1/2 lg:w-2/4 bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden cursor-pointer">
               <div className="header flex flex-col items-center gap-2">
                 <h3 className="calSans text-gray02 text-2xl lg:text-3xl text-center">
                   Facile à installer
@@ -119,25 +131,22 @@ const LandingFeatures = (): JSX.Element => {
               variants={variants.varient2}
               initial="hidden"
               animate={controls}
-              className="features-card  md:w-1/2 lg:w-2/4 bg-green03 lg:bg-opacity-40 hover:bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden  text-gray02 lg:text-opacity-40 hover:text-opacity-100 cursor-pointer"
+              className="features-card md:w-1/2 lg:w-2/4 bg-green03 lg:bg-opacity-40 hover:bg-green03 rounded-lg flex flex-col items-center p-8 gap-10 overflow-hidden text-gray02 lg:text-opacity-40 hover:text-opacity-100 cursor-pointer"
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
             >
               <div className="header flex flex-col items-center gap-2">
-                <h3 className="calSans text-2xl lg:text-3xl  text-center">
+                <h3 className="calSans text-2xl lg:text-3xl text-center">
                   Acces direct
                 </h3>
                 <p className="text-center">
                   Accédez et Explorez nos superbes offres avec ou sans compte
                 </p>
               </div>
-              {hover ? <img
+              <img
                 src="/mockup2.png"
-                className="lg:opacity-100"
-              /> : <img
-                src="/mockup2.png"
-                className="lg:opacity-40"
-              />}
+                className={`lg:opacity-${hover ? "100" : "40"}`}
+              />
             </motion.div>
           </motion.div>
         </div>

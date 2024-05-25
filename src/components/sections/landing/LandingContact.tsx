@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 const LandingContact = (): JSX.Element => {
     const controls = useAnimation();
     const { ref, inView } = useInView({ threshold: 0.3 });
-    const { sendEmail } = emailServices()
+    const { verifyEmail } = emailServices()
     const { emailSent, emailState, loadingState } = userServiceContext()
 
     useEffect(() => {
@@ -51,7 +51,7 @@ const LandingContact = (): JSX.Element => {
                     </motion.div>
                     {!emailSent ? (<form
                         className="w-full md:w-1/2 lg:w-3/5"
-                        onSubmit={(e: any) => { sendEmail(e); loadingState(true) }}
+                        onSubmit={(e: any) => { verifyEmail(e); loadingState(true) }}
                     >
                         <div className="cat relative z-40 top-8 flex justify-end">
                             <img src="/cat.svg" alt="" />

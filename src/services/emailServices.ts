@@ -37,21 +37,24 @@ export default function emailServices() {
     }
   };
 
-  const verifyEmail = async (email: string) => {
+  const verifyEmail = async (email: string): Promise<any> => {
     try {
       const res = await axios.post(
         "/api/emailVerification",
-        { email: email },
+        { userEmail: email },
         {
           headers: {
             "Content-Type": "application/json",
           },
         }
       );
-      console.log(res.data.message);
+      if (res.status === 200) {
+        loadingState(false);
+        emailState(true);
+        return true;
+      }
     } catch (err) {
       console.error(err);
-    } finally {
     }
   };
 
