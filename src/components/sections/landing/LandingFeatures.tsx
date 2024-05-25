@@ -104,6 +104,7 @@ const LandingFeatures = (): JSX.Element => {
                 placeholder="votre adresse email"
                 onChange={handleChange}
                 value={email}
+                required
               />
               <span
                 className="flex items-center whitespace-nowrap"

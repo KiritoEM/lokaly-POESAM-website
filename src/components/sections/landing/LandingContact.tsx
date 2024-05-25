@@ -61,7 +61,7 @@ const LandingContact = (): JSX.Element => {
                             <InputComponent01 type="email" placeholder="Adresse mail" name="email" />
                             <InputComponent01 type="number" placeholder="Numéro de téléphone" name="phoneNumber" />
 
-                            <textarea placeholder="Votre message" name="message" className="w-full h-40 border  border-blue01 border-opacity-30 focus:border-green01 placeholder:opacity-70 text-blue01 placeholder:text-blue011 py-4 px-4 rounded-md text-sm"></textarea>
+                            <textarea placeholder="Votre message" name="message" className="w-full h-40 border  border-blue01 border-opacity-30 focus:border-green01 placeholder:opacity-70 text-blue01 placeholder:text-blue011 py-4 px-4 rounded-md text-sm" required></textarea>
                             <button type="submit" className="text-sm bg-green01 w-max px-12 py-3 rounded-xl text-white mt-6">Envoyer</button>
                         </div>
                     </form>) :
