@@ -1,4 +1,5 @@
 import { userServiceContext } from "@/hooks/serviceContext";
+import { isValidEmail, isValidPhoneNumber } from "@/utils/regex";
 import axios from "axios";
 import { useState } from "react";
 
@@ -13,27 +14,32 @@ export default function emailServices() {
     const userMessage = form["message"].value;
     const phoneNumber = form["phoneNumber"].value;
 
-    const emailData = {
-      userName: userName,
-      userEmail: userEmail,
-      message: userMessage,
-      phoneNumber: phoneNumber,
-    };
+    const verifiedEmail = isValidEmail(userEmail);
+    const verifiedPhoneNumber = isValidPhoneNumber(`${phoneNumber}`);
 
-    console.log(emailData);
+    if (verifiedEmail && verifiedPhoneNumber) {
+      const emailData = {
+        userName: userName,
+        userEmail: userEmail,
+        message: userMessage,
+        phoneNumber: phoneNumber,
+      };
 
-    try {
-      const res = await axios.post("/api/emailContact", emailData, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      if (res.status === 200) {
-        loadingState(false);
-        emailState(true);
+      console.log(emailData);
+
+      try {
+        const res = await axios.post("/api/emailContact", emailData, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        if (res.status === 200) {
+          loadingState(false);
+          emailState(true);
+        }
+      } catch (err) {
+        console.error(err);
       }
-    } catch (err) {
-      console.error(err);
     }
   };
 

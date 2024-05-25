@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import FirebaseEmailServices from "@/services/firebase/FirebaseEmailServices";
 import emailServices from "@/services/emailServices";
 import { userServiceContext } from "@/hooks/serviceContext";
+import { isValidEmail } from "@/utils/regex";
 
 const LandingFeatures = (): JSX.Element => {
   const controls = useAnimation();
@@ -21,9 +22,13 @@ const LandingFeatures = (): JSX.Element => {
   const handleEmailSubmit = async () => {
     try {
       loadingState(true);
-      const isVerified = await verifyEmail(email);
-      if (isVerified) {
-        await addEmail(email);
+      const emailValid = isValidEmail(email);
+
+      if (emailValid) {
+        const isVerified = await verifyEmail(email);
+        if (isVerified) {
+          await addEmail(email);
+        }
       }
     } catch (error) {
       console.error("An error occurred during email processing:", error);
