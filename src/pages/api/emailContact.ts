@@ -103,13 +103,13 @@ export default async function handler(
         html: userHtmlContent, // Include the HTML content here
       });
 
-      // await transporter.sendMail({
-      //   from: `Lokaly-dev<${process.env.NEXT_PUBLIC_EMAIL_SENDER}>`,
-      //   to: "contact.lokaly@gmail.com",
-      //   subject: `Nouveau message`,
-      //   text: message,
-      //   html: comHtmlContent, // Include the HTML content here
-      // });
+      await transporter.sendMail({
+        from: `Lokaly-dev<${process.env.NEXT_PUBLIC_EMAIL_SENDER}>`,
+        to: "contact.lokaly@gmail.com",
+        subject: `Nouveau message`,
+        text: message,
+        html: comHtmlContent, // Include the HTML content here
+      });
       res.status(200).json({ message: "Email envoyé avec succès" });
     } catch (err) {
       res
