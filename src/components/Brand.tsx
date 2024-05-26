@@ -31,42 +31,42 @@ const Brand = (): JSX.Element => {
 
   return (
     <section
-      className="brand px-10 md:px-20 lg:px-32 py-10 bg-green02 "
+      className="brand px-7 md:px-16 lg:px-32 py-10 bg-green02 "
       ref={ref}
     >
-      <div className="container mx-auto w-full flex flex-wrap gap-10 md:gap-12 lg:gap-0 items-center justify-center lg:justify-between">
-        <div className="partenary flex  gap-5 md:gap-4 items-center">
-          <h4 className="text-5xl lg:text-6xl text-white calSans pt-2">
+      <div className="container mx-auto w-full grid gap-10 grid-cols-2 md:grid-cols-4 items-center">
+        <div className="partenary flex  gap-5 md:gap-4 items-center  justify-center">
+          <h4 className="text-4xl lg:text-6xl text-white calSans pt-2">
             {counts[0]}
           </h4>
-          <p className="text-white01">
+          <p className="text-white01 text-sm lg:text-md">
             Partenaires <br />
             locaux
           </p>
         </div>
-        <div className="job flex gap-5 md:gap-4 items-center">
-          <h4 className="text-5xl lg:text-6xl text-white calSans pt-2">
+        <div className="job flex gap-5 md:gap-4 items-center justify-center">
+          <h4 className="text-4xl lg:text-6xl text-white calSans pt-2">
             {counts[1]}
           </h4>
-          <p className="text-white01">
+          <p className="text-white01 text-sm lg:text-md">
             Emplois <br />
             créés
           </p>
         </div>
-        <div className="food flex gap-5 md:gap-4 items-center">
-          <h4 className="text-5xl lg:text-6xl text-white calSans pt-2">
+        <div className="food flex gap-5 md:gap-4 items-center justify-center">
+          <h4 className="text-4xl lg:text-6xl text-white calSans pt-2">
             {counts[2]}
           </h4>
-          <p className="text-white01">
+          <p className="text-white01 text-sm lg:text-md">
             Kilos de <br />
             nourriture sauvés
           </p>
         </div>
-        <div className="selling flex gap-5 md:gap-4 items-center">
-          <h4 className="text-5xl lg:text-6xl text-white calSans pt-2">
+        <div className="selling flex gap-5 md:gap-4 items-center justify-center">
+          <h4 className="text-4xl lg:text-6xl text-white calSans pt-2">
             {counts[3]} {/* Utiliser counts[3] pour les ventes */}
           </h4>
-          <p className="text-white01">
+          <p className="text-white01 text-sm lg:text-md">
             ventes
             <br />
             réalisées

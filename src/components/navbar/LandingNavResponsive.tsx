@@ -13,11 +13,11 @@ const LandingNavResponsive = (): JSX.Element => {
         className={`menu-items items-center relative bg-green02 w-full md:w-max px-0 md:px-24 py-12 rounded-xl shadow-gray-500 ${openMenu ? "open-menu" : "close-menu"
           }`}
       >
-        <ul className="flex-col flex gap-8 items-center">
+        <ul className="flex-col flex gap-7 items-center">
           {navList.map((item, index) => (
             <li
               key={index}
-              className="general-sans-medium text-white text-lg cursor-pointer"
+              className="general-sans-medium text-white text-md cursor-pointer"
               onClick={() => {
                 scrollSection(item.scrollSectionId ? item.scrollSectionId : "");
                 changeNav(false);
@@ -27,7 +27,7 @@ const LandingNavResponsive = (): JSX.Element => {
             </li>
           ))}
           <div className="contact-btn">
-            <button className="bg-white hover:bg-green01 rounded-3xl py-3 text-green02 px-6 general-sans-medium mt-2" onClick={() => { scrollSection("contact"); changeNav(false) }}>
+            <button className="bg-white text-md hover:bg-green01 rounded-3xl py-3 text-green02 px-6 general-sans-medium mt-2" onClick={() => { scrollSection("contact"); changeNav(false) }}>
               Nous contacter
             </button>
           </div>
