@@ -157,7 +157,7 @@ const LandingFeatures = (): JSX.Element => {
                 </p>
               </div>
               <img
-                src="/mockup2.png"
+                src="/mockup2.webp"
                 className={hover ? "lg:opacity-100" : "lg:opacity-40"}
               />
             </motion.div>
