@@ -100,16 +100,16 @@ export default async function handler(
         to: userEmail,
         subject: `Confirmation`,
         text: message,
-        html: userHtmlContent, // Include the HTML content here
+        html: userHtmlContent, 
       });
 
-      // await transporter.sendMail({
-      //   from: `Lokaly-dev<${process.env.NEXT_PUBLIC_EMAIL_SENDER}>`,
-      //   to: "contact.lokaly@gmail.com",
-      //   subject: `Nouveau message`,
-      //   text: message,
-      //   html: comHtmlContent, // Include the HTML content here
-      // });
+      await transporter.sendMail({
+        from: `Lokaly-dev<${process.env.NEXT_PUBLIC_EMAIL_SENDER}>`,
+        to: "contact.lokaly@gmail.com",
+        subject: `Nouveau message`,
+        text: message,
+        html: comHtmlContent, 
+      });
       res.status(200).json({ message: "Email envoyé avec succès" });
     } catch (err) {
       res
