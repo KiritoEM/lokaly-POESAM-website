@@ -35,14 +35,16 @@ const LandingHero = (): JSX.Element => {
             </FadeReveal>
 
             <FadeReveal>
-              {/* <button className="text-white bg-green01 hover:bg-green02 rounded-3xl px-6 py-3 flex items-center gap-2 w-max mt-8">
-                Télécharger l' app{" "}
-                <img src="/icons/download-icon.svg" className=" w-5" alt="" />
-              </button> */}
-              <button className="text-white bg-gray03 rounded-3xl px-6 py-3 flex items-center gap-2 w-max mt-8">
+              <a href="https://drive.usercontent.google.com/download?id=1leZPZHL314p5WZEKlUoWjt6bJ3I5RQbg&export=download&authuser=0" download target="_blank">
+                <button className="text-white bg-green01 hover:bg-green02 rounded-3xl px-6 py-3 flex items-center gap-2 w-max mt-8">
+                  Télécharger l' app{" "}
+                  <img src="/icons/download-icon.svg" className=" w-5" alt="" />
+                </button>
+              </a>
+              {/* <button className="text-white bg-gray03 rounded-3xl px-6 py-3 flex items-center gap-2 w-max mt-8">
                 Téléchargeable bientôt{" "}
                 <img src="/icons/download-icon.svg" className=" w-5" alt="" />
-              </button>
+              </button> */}
             </FadeReveal>
           </div>
         </div>
