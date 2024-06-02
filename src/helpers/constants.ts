@@ -30,6 +30,11 @@ const partnerList: Ipartners[] = [
     link: "https://www.facebook.com/NectartServiceTraiteur",
     colspan: 3,
   },
+  {
+    img: "partner4.webp",
+    link: "https://www.facebook.com/madanewlevel",
+    colspan: 3,
+  },
 ];
 
 const FAQData: IFAQCard[] = [
