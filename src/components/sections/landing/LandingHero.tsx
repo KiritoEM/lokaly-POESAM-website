@@ -35,7 +35,7 @@ const LandingHero = (): JSX.Element => {
             </FadeReveal>
 
             <FadeReveal>
-              <a href="https://drive.usercontent.google.com/download?id=1RKdVH9KcbQOJJKWSLJI9FvZuvjrwh2S-&export=download&authuser=0" download target="_blank">
+              <a href="https://drive.usercontent.google.com/download?id=1m2bymcRUJUDJ6_B4BpnbU6v0P6ShHGjS&export=download&authuser=0" download target="_blank">
                 <button className="text-white bg-green01 hover:bg-green02 rounded-3xl px-6 py-3 flex items-center gap-2 w-max mt-8">
                   Télécharger l' app{" "}
                   <img src="/icons/download-icon.svg" className=" w-5" alt="" />
