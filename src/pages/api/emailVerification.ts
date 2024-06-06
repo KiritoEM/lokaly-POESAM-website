@@ -30,7 +30,7 @@ export default async function handler(
                 <h1 style="font-size: 24px; line-height: 1.8em; color: #02260B; margin: 0;">Nouveau email ajouté depuis le NewLetter</h1>
             </div>
     
-            <img src="https://raw.githubusercontent.com/KiritoEM/Proxima/main/lokaly.webp" alt="Lôkaly Logo" style="object-fit: cover;width: 170px; height: auto; margin: 0 auto; display: block;margin-bottom:38px">
+            <img src="https://raw.githubusercontent.com/KiritoEM/Proxima/main/lokaly.png" alt="Lôkaly Logo" style="object-fit: cover;width: 170px; height: auto; margin: 0 auto; display: block;margin-bottom:38px">
     
             <div id="main" style="position: relative; margin: 0; padding: 0;">
                 <span id="topLine" style="display: block; width: 50%; margin: auto; border: 1px solid #00944E; margin-bottom: 38px;"></span>
