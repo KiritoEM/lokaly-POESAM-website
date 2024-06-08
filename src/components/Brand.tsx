@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 const Brand = (): JSX.Element => {
-  const overviewData = [3, 0, 0, 0];
+  const overviewData = [4, 0, 0, 0];
   const [counts, setCounts] = useState([0, 0, 0, 0]);
   const [shouldIncrement, setShouldIncrement] = useState(true);
   const { ref, inView } = useInView({
